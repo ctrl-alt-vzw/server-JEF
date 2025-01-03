@@ -1,0 +1,77 @@
+
+services:
+  store:
+    image: "postgres:15.1"
+    ports:
+      - 5432:5432
+    command: postgres
+    environment:
+      POSTGRES_USER:
+      POSTGRES_DB: ${POSTGRES_DATABASE}
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DATABASE:
+      POSTGRES_PASSWORD:
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $POSTGRES_USER -d $POSTGRES_DATABASE "]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - ./_volumes/store:/var/lib/postgresql/data
+    networks:
+      - local
+
+
+  socket_api:
+    image: "$OWNER/jef_socket_api:$VERSION"
+    command: ["npm", "run", "dev"]
+    restart: always
+    environment:
+      POSTGRES_USER:
+      POSTGRES_DATABASE:
+      POSTGRES_DB: ${POSTGRES_DATABASE}
+      POSTGRES_PASSWORD:
+      POSTGRES_HOST: store
+      OLLAMA_HOST: ollama
+      FILESTORE_HOST: filestore
+    ports:
+      - 3000:3000
+    depends_on:
+      store:
+        condition: service_healthy
+    volumes:
+      - ./images/socket_api/src:/usr/app/src
+    networks:
+      - local
+      
+
+  filestore:
+    image: "$OWNER/jef_filestore:$VERSION"
+    command: ["npm", "run", "dev"]
+    restart: always
+    ports:
+      - 3030:3000
+    volumes:
+      - ./images/filestore/src:/usr/app/src
+      - ./_uploads:/usr/app/uploads
+      - ./_volumes/images:/usr/app/generations
+    networks:
+      - local
+
+
+
+  ollama:
+    image: "ollama/ollama:latest"
+    ports:
+      - 11434:11434
+    volumes:
+      - ./_models/ollama:/root/.ollama
+    networks:
+      - local
+
+networks:
+  mqtt:
+    driver: bridge
+
+  local:
+    driver: bridge

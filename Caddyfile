@@ -1,0 +1,16 @@
+tellaboutme.be {
+    reverse_proxy web:80 {
+        header_down Strict-Transport-Security max-age=31536000;
+    }
+}
+api.tellaboutme.be {
+    reverse_proxy api:3000 {
+        header_down Strict-Transport-Security max-age=31536000;
+    }
+}
+
+media.tellaboutme.be {
+    reverse_proxy filestore:3000 {
+        header_down Strict-Transport-Security max-age=31536000;
+    }
+}

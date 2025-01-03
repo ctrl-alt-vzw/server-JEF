@@ -1,0 +1,127 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 199768630331746,
+      "steps": 4,
+      "cfg": 1.4000000000000001,
+      "sampler_name": "lcm",
+      "scheduler": "sgm_uniform",
+      "denoise": 1,
+      "model": [
+        "10",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "SDXL-TURBO/sd_xl_turbo_1.0_fp16.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "A futuristic astronaut with short, dark hair and brown eyes, wearing a sleek white and silver spacesuit adorned with various utility belts and tool pouches, standing in front of a large, metallic airlock door on Mars Colony Alpha, with a robotic arm beside her holding a tablet displaying a High Definition image of the Martian landscape, as she communicates with an isometric projection of a sentient robot companion.",
+      "clip": [
+        "10",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "text, watermark",
+      "clip": [
+        "10",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "10": {
+    "inputs": {
+      "lora_name": "DiscoElysiumStyle.safetensors",
+      "strength_model": 1.2,
+      "strength_clip": 2,
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "12": {
+    "inputs": {
+      "path": "/Users/janeveraert/Documents/CTRL + ALT/projects/JEF/server/_volumes/images/test.png",
+      "quality": 100,
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageSaver",
+    "_meta": {
+      "title": "Image Save"
+    }
+  }
+}

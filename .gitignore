@@ -1,0 +1,8 @@
+_uploads
+_volumes
+_models
+.env
+_items
+_logs
+
+.DS_Store
