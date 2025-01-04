@@ -1,4 +1,4 @@
-FROM node:current-alpine3.21
+FROM --platform=linux/x86_64 node:current-alpine3.21
 
 WORKDIR /usr/app
 

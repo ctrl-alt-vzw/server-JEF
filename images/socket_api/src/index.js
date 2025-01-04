@@ -139,7 +139,6 @@ async function execute_prompt(id, step_handle, context) {
       .then(r => r.json())
       .then(d => {
         const response = d.response;
-        console.log(response)
         try {
           const split_response = response.split(/[\t|\n]+/g).filter(e=> e.length > 0).map((e) => cleanup_response(e))
           if(split_response.length > 2) {
@@ -240,14 +239,14 @@ wss.on('connection', function connection(_ws) {
 });
 async function initialise() {
   console.log("connect")
-  // fetch(`http://${process.env.OLLAMA_HOST}:11434/api/pull`, { method: "POST", body: JSON.stringify({ model: "llama3.2"})})
-  // fetch(`http://${process.env.OLLAMA_HOST}:11434/api/pull`, { method: "POST", body: JSON.stringify({ model: "tinyllama"})})
+  fetch(`http://${process.env.OLLAMA_HOST}:11434/api/pull`, { method: "POST", body: JSON.stringify({ model: "llama3.2"})})
+  fetch(`http://${process.env.OLLAMA_HOST}:11434/api/pull`, { method: "POST", body: JSON.stringify({ model: "tinyllama"})})
   
   timer = setInterval(() => {
     let toRemove = -1;
     pipeline.forEach((e, i) => {
       if(toRemove == -1) {
-        fetch(`http://${process.env.FILESTORE_HOST}:3000/generations/` + e, { method: "HEAD"})
+        fetch(`http://${process.env.FILESTORE_HOST}:3030/generations/` + e, { method: "HEAD"})
           .then(res => {
             if (res.ok) {
               console.log("done generating", e)
@@ -257,6 +256,7 @@ async function initialise() {
             } 
           }).catch(err => {
             // no image to be found
+            console.log(err)
           });
       }
 

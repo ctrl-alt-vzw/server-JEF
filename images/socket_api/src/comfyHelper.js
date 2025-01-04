@@ -27,14 +27,14 @@ export const queue_prompt = (prompt_in, uuid, type) => {
     flow = flows[type]
   }
   console.log("PROMPT", prompt_in)
-  flow["6"]["inputs"]["text"] = prompt_in
+  flow["6"]["inputs"]["text"] = prompt_in + " disco elysium style, isometric, high detail"
   flow["3"]["inputs"]["seed"] = Math.random() * 10000
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type
-  flow["12"]["inputs"]["path"] = "/home/jan/Documents/server-jef/_volumes/images/" + uuid +"_"+type+".png"
+  flow["12"]["inputs"]["path"] = "/home/jan/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
   console.log(flow["12"]["inputs"]["path"])
 
   const p = {"prompt": flow}
-  const url = 'http://127.0.0.1:8188/prompt'; // Replace with the actual ComfyUI endpoint
+  const url = 'http://0.0.0.0:8188/prompt'; 
   fetch(url, {
       method: "POST",
       headers: {

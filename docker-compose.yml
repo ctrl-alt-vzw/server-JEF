@@ -32,18 +32,19 @@ services:
       POSTGRES_DATABASE:
       POSTGRES_DB: ${POSTGRES_DATABASE}
       POSTGRES_PASSWORD:
-      POSTGRES_HOST: store
-      OLLAMA_HOST: ollama
-      FILESTORE_HOST: filestore
+      POSTGRES_HOST: localhost
+      OLLAMA_HOST: localhost
+      FILESTORE_HOST: localhost
     ports:
+      - 3000:3000
+    expose:
       - 3000:3000
     depends_on:
       store:
         condition: service_healthy
     volumes:
       - ./images/socket_api/src:/usr/app/src
-    networks:
-      - local
+    network_mode: host
       
 
   filestore:
@@ -52,6 +53,8 @@ services:
     command: ["npm", "run", "dev"]
     restart: always
     ports:
+      - 3030:3000
+    expose:
       - 3030:3000
     volumes:
       - ./images/filestore/src:/usr/app/src
@@ -69,6 +72,14 @@ services:
       - ./_models/ollama:/root/.ollama
     networks:
       - local
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
 
 networks:
   mqtt:
@@ -76,3 +87,4 @@ networks:
 
   local:
     driver: bridge
+    

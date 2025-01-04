@@ -47,8 +47,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get("/", (req, res) => {
-
-  fs.readdir("./", (err, files) => {
+  fs.readdir("./generations", (err, files) => {
     res.send({
       "files": files,
       "message": "hello world - filestorage"
@@ -61,6 +60,7 @@ app.get("/", (req, res) => {
 // app.get("/", express.static(path.join(__dirname, './')));
 
 app.get('/generations/:fileName', cors(), function (req, res) {
+
   try {
     const filePath = path.join(__dirname, './../generations', req.params.fileName)
     if (fs.existsSync(filePath)) {
