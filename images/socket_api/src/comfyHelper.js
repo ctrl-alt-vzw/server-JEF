@@ -30,6 +30,7 @@ export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
   }
 
   flow["105"]["inputs"]["image"] = `${style_ref}`
+  flow["104"]["inputs"]["weight"] = 0.65
   flow["10"]["inputs"]["positive"] = prompt_in + ""
   flow["64"]["inputs"]["seed"] = Math.random() * 10000
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type
