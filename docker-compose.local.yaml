@@ -56,6 +56,7 @@ services:
       - ./images/filestore/src:/usr/app/src
       - ./_uploads:/usr/app/uploads
       - ./_volumes/images:/usr/app/generations
+      - ./_styles:/usr/app/styles
     networks:
       - local
 

@@ -23,12 +23,13 @@ const flows = {
   "STYLE": style_flow
 }
 
-export const queue_prompt = (prompt_in, uuid, type) => {
+export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
   let flow = base_flow;
   if(flows[type]) {
     flow = flows[type]
   }
 
+  flow["105"]["inputs"]["image"] = `http://${process.env.FILESTORE_HOST}/styles/${style_ref}`
   flow["10"]["inputs"]["positive"] = prompt_in + ""
   flow["64"]["inputs"]["seed"] = Math.random() * 10000
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type

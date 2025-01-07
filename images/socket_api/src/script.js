@@ -6,19 +6,6 @@ export const script = (handle) => {
 	const prepend = `Respond with the exact answer only. Do not include any extra text before or after the main response. Provide only the answer in plain text. If you answer with multiple items, make a list (1., 2., 3.) separated by newlines (enter). Here is the context: [[CONTEXT]]. `
 	const vprepend = `Respond with the exact answer only. Do not include any extra text before or after the main response. Provide only the answer in plain text. include the following words: "High definition, 4k, high detail, video game asset, isometric". Here is the context: [[CONTEXT]]. `
 	switch(handle) {
-	  case "STYLE": 
-	  	return { 
-		    method: "select", 
-		    translate: true,
-		    chat: {
-		      en: "Welcome! You are about to create your own game. Through a number of questions I will try to build a story together with you about which the game can be about. After this you can play your own game on the other computer. We start with the first question; What style do you want your game to have?",
-		      nl: "Welkom! je staat op het punt je eigen spel te maken. Via een aantal vragen zal ik proberen samen met jou een verhaal op te bouwen waarover het spel kan gaan. Hierna kan je je eigen spel spelen op de andere computer. We beginnen eraan met de eerste vraag; In welke tijdsperiode zou je graag willen dat je spel zich afspeelt?",
-		      fr: "Bienvenue! vous êtes sur le point de créer votre propre jeu. À travers un certain nombre de questions, je vais essayer de construire avec vous une histoire sur ce que peut être le jeu. Après cela, vous pouvez jouer à votre propre jeu sur l'autre ordinateur. Nous commencerons par la première question; À quelle période se déroule votre jeu ?",
-		    },
-		    visual: vprepend + "Generate a prompt for stable diffusion to generate a visual of the style you just received",
-		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 visual art style, including artist names, which could be used as a style reference` 
-		  }
-	  	break;
 	  case "ENVIRONMENT": 
 	  	return { 
 		    method: "select", 

@@ -57,7 +57,6 @@ app.get("/", (req, res) => {
 })
 
 
-// app.get("/", express.static(path.join(__dirname, './')));
 
 app.get('/generations/:fileName', cors(), function (req, res) {
 
@@ -73,6 +72,22 @@ app.get('/generations/:fileName', cors(), function (req, res) {
     res.status(404).send()
   }
 });
+
+app.get('/styles/:fileName', cors(), function (req, res) {
+
+  try {
+    const filePath = path.join(__dirname, './../styles', req.params.fileName)
+    if (fs.existsSync(filePath)) {
+      res.sendFile(filePath);
+    } else {
+      res.status(404).send()
+    }
+  } catch(e) {
+    // does not exist
+    res.status(404).send()
+  }
+});
+
 
 
 app.post('/upload', upload.single('image'), async (req, res) => {

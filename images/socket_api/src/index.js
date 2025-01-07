@@ -14,7 +14,6 @@ const pipeline = []
 
 const conversations = {}
 const STEPS = [
-  "STYLE",
   "ENVIRONMENT",
   "PROTAGONIST", 
   "PROTAGONIST_LOOK",
@@ -88,7 +87,7 @@ async function handle_selection(uuid, step_id, selected) {
 
     if(visual_prompt !== null) {
       const context = build_context(uuid)
-      execute_prompt_visual(visual_prompt, context, uuid, STEPS[step_id])
+      execute_prompt_visual(visual_prompt, context, uuid, STEPS[step_id], conversations[uuid].style_ref)
     }
 
     conversation_step(uuid)
@@ -163,7 +162,7 @@ async function execute_prompt(id, step_handle, context) {
   }
 }
 
-async function execute_prompt_visual(prompt, context, uuid, handle) {
+async function execute_prompt_visual(prompt, context, uuid, handle, style_ref) {
   const replacedPrompt = prompt.replace("[[CONTEXT]]", context)
   console.log("SD PROMPT", replacedPrompt)
   fetch(`http://${process.env.OLLAMA_HOST}:11434/api/generate`, {
@@ -178,7 +177,7 @@ async function execute_prompt_visual(prompt, context, uuid, handle) {
     .then(d => {
       const response = d.response;
       console.log(response)
-      queue_prompt(response, uuid, handle)
+      queue_prompt(response, uuid, handle, style_ref)
       pipeline.push(uuid +"_"+handle+".png")
     })  
     .catch((e) => {
@@ -199,17 +198,19 @@ async function initialise_conversation(uuid) {
 }
 async function createNewGame(id) {
   // insert new game into DB
+  const styles = ["style1.webp", "style2.webp", "style3.webp", "style4.webp", "style5.webp", "style6.webp", "style7.webp", "style8.webp", "style9.webp", "style10.webp", "style11.webp" ]
+
   db.insert({
     UUID: generateUUID(),
     cartridge_id: id
   }).table("games").returning("*").then((d) => {
     conversations[d[0].UUID] = {
+      style_ref: styles[Math.floor(Math.random()*styles.length)],
       step: 0,
       cartridge_id: id,
       language: "nl",
       current_options: [],
       info: {
-        STYLE: {},
         ENVIRONMENT: {},
         PROTAGONIST: {},
         PROTAGONIST_LOOK: {},
