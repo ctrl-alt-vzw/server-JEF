@@ -29,11 +29,11 @@ export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
     flow = flows[type]
   }
 
-  flow["105"]["inputs"]["image"] = `${style_ref}, (top view:1.6)`
+  flow["105"]["inputs"]["image"] = `${style_ref}`
   flow["104"]["inputs"]["weight"] = 0.7
   flow["64"]["inputs"]["steps"] = 16
   flow["64"]["inputs"]["cfg"] = 8
-  flow["10"]["inputs"]["positive"] = prompt_in + ""
+  flow["10"]["inputs"]["positive"] = prompt_in + ", (top view:1.6)"
   flow["64"]["inputs"]["seed"] = Math.random() * 10000
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type
   flow["110"]["inputs"]["path"] = "/home/jan/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
