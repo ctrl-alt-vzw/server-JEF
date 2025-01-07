@@ -4,7 +4,7 @@
 export const script = (handle) => { 
 
 	const prepend = `Respond with the exact answer only. Do not include any extra text before or after the main response. Provide only the answer in plain text. If you answer with multiple items, make a list (1., 2., 3.) separated by newlines (enter). Here is the context: [[CONTEXT]]. `
-	const vprepend = `Respond with the exact answer only. Do not include any extra text before or after the main response. Provide only the answer in plain text. include the following words: "High definition, 4k, high detail, video game asset, isometric". Here is the context: [[CONTEXT]]. `
+	const vprepend = `Respond with the exact answer only. Do not include any extra text before or after the main response. Provide only the answer in plain text. include the following words: "High definition, 4k, high detail". Here is the context: [[CONTEXT]]. `
 	switch(handle) {
 	  case "ENVIRONMENT": 
 	  	return { 
@@ -15,7 +15,7 @@ export const script = (handle) => {
 		      nl: "Welkom! je staat op het punt je eigen spel te maken. Via een aantal vragen zal ik proberen samen met jou een verhaal op te bouwen waarover het spel kan gaan. Hierna kan je je eigen spel spelen op de andere computer. We beginnen eraan met de eerste vraag; In welke tijdsperiode zou je graag willen dat je spel zich afspeelt?",
 		      fr: "Bienvenue! vous êtes sur le point de créer votre propre jeu. À travers un certain nombre de questions, je vais essayer de construire avec vous une histoire sur ce que peut être le jeu. Après cela, vous pouvez jouer à votre propre jeu sur l'autre ordinateur. Nous commencerons par la première question; À quelle période se déroule votre jeu ?",
 		    },
-		    visual: vprepend + "Generate a prompt for stable diffusion to generate a visual for the tileset environment, topdown, 512x512 tiles, brightly colorful, for the context provided before",
+		    visual: vprepend + "Generate a prompt for stable diffusion to generate a visual for the tileset environment, topdown, 512x512 tiles, for the context provided before",
 		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 combinations of creative and weird timeperiods and locations a computer game for children can take place in` 
 		  }
 	  	break;
@@ -93,7 +93,7 @@ export const script = (handle) => {
 		      nl: "En wie zijn de assistenten van de slechterik?",
 		      fr: "Et qui sont les assistants de la scélérat ?",
 		    },
-		    visual: vprepend + "Generate a stable diffusion prompt for the henchmen of the game, based on the description",
+		    visual: vprepend + "Generate a stable diffusion prompt for the henchmen of the game, based on the description, make sure to include (white background:1.2)",
 		    prompt: prepend + "what creative  enemies could we encounter that the antagonist puts in our path" 
 		  }
 	  	break;
