@@ -31,10 +31,9 @@ export const queue_prompt = (prompt_in, uuid, type) => {
   flow["64"]["inputs"]["seed"] = Math.random() * 10000
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type
   flow["110"]["inputs"]["path"] = "/home/jan/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
-  console.log(flow["12"]["inputs"]["path"])
 
   const p = {"prompt": flow}
-  const url = 'http://192.168.0.148:8188/prompt'; 
+  const url = 'http://0.0.0.0:8188/prompt'; 
   fetch(url, {
       method: "POST",
       headers: {
