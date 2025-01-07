@@ -14,6 +14,7 @@ const pipeline = []
 
 const conversations = {}
 const STEPS = [
+  "STYLE",
   "ENVIRONMENT",
   "PROTAGONIST", 
   "PROTAGONIST_LOOK",
@@ -208,6 +209,7 @@ async function createNewGame(id) {
       language: "nl",
       current_options: [],
       info: {
+        STYLE: {},
         ENVIRONMENT: {},
         PROTAGONIST: {},
         PROTAGONIST_LOOK: {},
