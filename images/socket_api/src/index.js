@@ -254,7 +254,9 @@ async function initialise() {
               console.log("done generating", e)
               toRemove = i;
               pipeline.splice(toRemove, 1);
-              callback("IMAGE/"+e.split("_")[0]+"/"+e)
+              setTimeout(()=> {
+                callback("IMAGE/"+e.split("_")[0]+"/"+e)
+              }, 500)
             } 
           }).catch(err => {
             // no image to be found

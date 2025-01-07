@@ -16,7 +16,7 @@ export const script = (handle) => {
 		      fr: "Bienvenue! vous êtes sur le point de créer votre propre jeu. À travers un certain nombre de questions, je vais essayer de construire avec vous une histoire sur ce que peut être le jeu. Après cela, vous pouvez jouer à votre propre jeu sur l'autre ordinateur. Nous commencerons par la première question; À quelle période se déroule votre jeu ?",
 		    },
 		    visual: vprepend + "Generate a prompt for stable diffusion to generate a visual of the style you just received",
-		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 styles a game might have visualy` 
+		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 visual art style, including artist names, which could be used as a style reference` 
 		  }
 	  	break;
 	  case "ENVIRONMENT": 
