@@ -18,7 +18,7 @@ const flows = {
   "ENVIRONMENT": env_flow,
   "PROTAGONIST_LOOK": character_flow,
   "ANTAGONIST_LOOK": character_flow,
-  "HENCHMEN": character_flow,
+  "HENCHMEN": base_flow,
   "NPC": character_flow,
   "STYLE": style_flow
 }
