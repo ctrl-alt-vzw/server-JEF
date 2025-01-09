@@ -103,16 +103,16 @@
   },
   "64": {
     "inputs": {
-      "seed": 711200319978528,
-      "steps": 35,
-      "cfg": 7,
-      "sampler_name": "dpmpp_2m_sde_gpu",
-      "scheduler": "karras",
+      "seed": 10736276508520,
+      "steps": 4,
+      "cfg": 1.4000000000000001,
+      "sampler_name": "lcm",
+      "scheduler": "sgm_uniform",
       "denoise": 1,
       "preview_method": "auto",
       "vae_decode": "true",
       "model": [
-        "104",
+        "114",
         0
       ],
       "positive": [
@@ -226,7 +226,7 @@
   },
   "104": {
     "inputs": {
-      "weight": 1,
+      "weight": 0.8,
       "weight_type": "weak input",
       "combine_embeds": "concat",
       "start_at": 0.1,
@@ -280,18 +280,6 @@
       "title": "RMBG (RMBG-2.0, INSPYRENET, BEN)"
     }
   },
-  "107": {
-    "inputs": {
-      "images": [
-        "106",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
   "108": {
     "inputs": {
       "filename_prefix": "character-",
@@ -329,6 +317,20 @@
     "class_type": "ImageSaver",
     "_meta": {
       "title": "Image Save"
+    }
+  },
+  "114": {
+    "inputs": {
+      "lora_name": "Hyper-SD/Hyper-SD15-4steps-lora.safetensors",
+      "strength_model": 1,
+      "model": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
     }
   }
 }
