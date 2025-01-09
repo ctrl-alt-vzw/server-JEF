@@ -35,6 +35,7 @@ services:
       POSTGRES_HOST: localhost
       OLLAMA_HOST: localhost
       FILESTORE_HOST: localhost
+      TRANSLATE_HOST: localhost
     ports:
       - 3000:3000
     expose:

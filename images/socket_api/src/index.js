@@ -75,7 +75,7 @@ function messageHandler(data) {
 }
 
 async function translate(text, lang, cb) {
-  await fetch("http://192.168.0.148:5000/translate", {
+  await fetch(`http://${process.env.TRANSLATE_HOST}:11434/translate`, {
     method: "POST",
     body: JSON.stringify({
       q: text,
