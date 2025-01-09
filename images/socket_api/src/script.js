@@ -42,7 +42,7 @@ export const script = (handle) => {
 		      fr: "A quoi ressemble votre personnage principal?",
 		    },
 		    visual: "(white background:1.8) , 2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, hero, game asset",
-		    prompt: prepend +"Give me 3 descriptions of how the main character looks. Include Hair color, clothes, colorful highlights, add some details." 
+		    prompt: prepend +"Give me 3 descriptions of how the main character looks." 
 		  }
 	  	break;
 	  case "GOAL": 
@@ -81,7 +81,7 @@ export const script = (handle) => {
 		      fr: "Comment décririez-vous le méchant?",
 		    },
 		    visual: "(white background:1.8) , 2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, game asset",
-		    prompt: prepend + "Give me 3 creative descriptions of the villain character. Include Hair color, clothes, colorful highlights." 
+		    prompt: prepend + "Give me 3 creative descriptions of the villain character." 
 		  }
 	  	break;
 	  case "HENCHMEN": 
