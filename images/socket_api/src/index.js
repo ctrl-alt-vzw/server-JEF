@@ -156,7 +156,7 @@ async function execute_prompt(id, step_handle, context) {
       .then(d => {
 
         const response = d.response;
-        translate(response, "nl", (translated_response) => {
+        translate(response, conversations[id].language, (translated_response) => {
           try {
             const split_response = translated_response.split(/[\t|\n]+/g).filter(e=> e.length > 0).map((e) => cleanup_response(e))
             if(split_response.length > 2) {
