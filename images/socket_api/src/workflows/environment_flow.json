@@ -36,17 +36,17 @@
       "controlnet_1": "ControlNet-v1-1/control_v11p_sd15_scribble.pth",
       "controlnet_strength_1": 0.8,
       "start_percent_1": 0,
-      "end_percent_1": 1,
+      "end_percent_1": 0.8,
       "switch_2": "On",
       "controlnet_2": "ControlNet-v1-1/control_v11p_sd15_canny.pth",
-      "controlnet_strength_2": 0.2,
-      "start_percent_2": 0.2,
-      "end_percent_2": 1,
+      "controlnet_strength_2": 0.5,
+      "start_percent_2": 0,
+      "end_percent_2": 0.4,
       "switch_3": "On",
       "controlnet_3": "ControlNet-v1-1/control_v11p_sd15_softedge.pth",
-      "controlnet_strength_3": 0.2,
+      "controlnet_strength_3": 0.6,
       "start_percent_3": 0.6,
-      "end_percent_3": 1,
+      "end_percent_3": 0.8,
       "image_1": [
         "26",
         0
@@ -71,7 +71,7 @@
       "high_threshold": 200,
       "resolution": 256,
       "image": [
-        "14",
+        "115",
         0
       ]
     },
@@ -94,7 +94,7 @@
   },
   "14": {
     "inputs": {
-      "image": "terrain_placeholder.png",
+      "image": "ground.png",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -105,7 +105,7 @@
   "15": {
     "inputs": {
       "safe": "disable",
-      "resolution": 256,
+      "resolution": 512,
       "image": [
         "14",
         0
@@ -155,9 +155,9 @@
   },
   "64": {
     "inputs": {
-      "seed": 481562318322311,
-      "steps": 4,
-      "cfg": 1.4000000000000001,
+      "seed": 517977856977134,
+      "steps": 8,
+      "cfg": 1.6,
       "sampler_name": "lcm",
       "scheduler": "sgm_uniform",
       "denoise": 1,
@@ -232,10 +232,10 @@
   },
   "104": {
     "inputs": {
-      "weight": 0.9,
+      "weight": 0.8,
       "weight_type": "style transfer",
       "combine_embeds": "concat",
-      "start_at": 0.3,
+      "start_at": 0,
       "end_at": 1,
       "embeds_scaling": "V only",
       "model": [
@@ -324,6 +324,16 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LoraLoaderModelOnly"
+    }
+  },
+  "115": {
+    "inputs": {
+      "image": "ground_f.jpeg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
     }
   }
 }
