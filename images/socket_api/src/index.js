@@ -84,7 +84,10 @@ async function translate(text, lang, cb) {
     }),
     headers: { "Content-Type": "application/json" },
   }).then((r) => r.json() )
-  .then((d) => cb(d))
+  .then((d) => {
+    console.log(d, text, lang);
+    cb(d)
+  })
 }
 
 async function handle_selection(uuid, step_id, selected) {
