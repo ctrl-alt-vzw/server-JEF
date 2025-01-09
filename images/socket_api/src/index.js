@@ -132,6 +132,7 @@ function build_context(uuid) {
   for(let i = 0; i < Object.keys(items).length; i++) {
     const c = items[Object.keys(items)[i]];
     if(c.generated && STEPS[i].toLowerCase().indexOf("_look") == -1) {
+      console.log(c.generated[c.selected])
       const field = c.generated[c.selected].text;
       const full = STEPS[i].toLowerCase() + ": " + field
       str += str.length > 0 ? ", " + full : full;
