@@ -165,12 +165,12 @@ async function execute_prompt(id, step_handle, context) {
                 option: i
               }
             })
-            enriched.forEach((e, i) => {
+            const translated = enriched.map((e, i) => {
               translate(e.text, conversations[id].language, (res) => {
                 conversations[id].info[step_handle]["generated"][i].text = res.translatedText
               })
             })
-            conversations[id].info[step_handle]["generated"] = enriched
+            conversations[id].info[step_handle]["generated"] = translated
             callback(`GENERATED_OPTIONS/${JSON.stringify(enriched)}`)
           } else {
             console.log("redo")
