@@ -167,7 +167,10 @@ async function execute_prompt(id, step_handle, context) {
             })
             const translated = enriched.map((e, i) => {
               translate(e.text, conversations[id].language, (res) => {
-                conversations[id].info[step_handle]["generated"][i].text = res.translatedText
+                return {
+                  ...e,
+                  text: res.translatedText
+                }
               })
             })
             conversations[id].info[step_handle]["generated"] = translated
