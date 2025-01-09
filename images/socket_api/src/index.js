@@ -219,7 +219,7 @@ async function createNewGame(id) {
       style_ref: styles[Math.floor(Math.random()*styles.length)],
       step: 0,
       cartridge_id: id,
-      language: "nl",
+      language: "en",
       current_options: [],
       info: {
         ENVIRONMENT: {},
