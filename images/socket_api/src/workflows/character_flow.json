@@ -103,7 +103,7 @@
   },
   "64": {
     "inputs": {
-      "seed": 10736276508520,
+      "seed": 1046487376982172,
       "steps": 4,
       "cfg": 1.4000000000000001,
       "sampler_name": "lcm",
@@ -112,7 +112,7 @@
       "preview_method": "auto",
       "vae_decode": "true",
       "model": [
-        "114",
+        "115",
         0
       ],
       "positive": [
@@ -252,7 +252,7 @@
   },
   "105": {
     "inputs": {
-      "image": "style1.webp",
+      "image": "style8.webp",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -325,6 +325,20 @@
       "strength_model": 1,
       "model": [
         "104",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    }
+  },
+  "115": {
+    "inputs": {
+      "lora_name": "flat_color.pt",
+      "strength_model": 0.4,
+      "model": [
+        "114",
         0
       ]
     },
