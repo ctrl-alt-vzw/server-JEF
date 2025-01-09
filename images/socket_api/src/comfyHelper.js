@@ -30,7 +30,7 @@ export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
   }
 
   flow["105"]["inputs"]["image"] = `${style_ref}`
-  flow["104"]["inputs"]["weight"] = 0.85
+  flow["104"]["inputs"]["weight"] = 0.65
   flow["64"]["inputs"]["steps"] = 24
   flow["64"]["inputs"]["cfg"] = 8
   flow["10"]["inputs"]["positive"] = prompt_in + ", 2d, game asset, (top view:1.4)"
