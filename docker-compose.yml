@@ -80,6 +80,21 @@ services:
               count: 1
               capabilities: [gpu]
 
+libretranslate-cuda:
+    container_name: libretranslate
+    build:
+      context: .
+      dockerfile: libretranslate/cuda.Dockerfile
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 
 networks:
   mqtt:
