@@ -7,7 +7,7 @@
       "lora_name": "None",
       "lora_model_strength": 1,
       "lora_clip_strength": 1,
-      "positive": "2D drawing, environment tileset of A futuristic underwater city on an oceanic research station., topdown, 512x512 tiles, (top view:1.2), drawing, clear background",
+      "positive": "2D drawing, environment tileset of A futuristic underwater city on an oceanic research station. include buildings, plantsm and other elements, topdown, 512x512 tiles, (top view:1.2), drawing, clear background",
       "negative": "(worst quality, low quality, normal quality, lowres oversaturated, undersaturated, overexposed, underexposed, grayscale, bw, bad photo, bad photography, bad art, nude, sexual, explicit:1.4), (busty, developed, breast, breasts:1.4)(watermark, signature, text font, username, error, logo, words, letters, digits, autograph, trademark, name:1.2), (blur, blurry, grainy) (accessories, background, bags:1.4), (bad hands, bad anatomy, bad body, bad face, bad teeth, bad arms, bad legs, deformities:1.3) reflections",
       "token_normalization": "none",
       "weight_interpretation": "comfy",
@@ -40,8 +40,8 @@
       "switch_2": "On",
       "controlnet_2": "ControlNet-v1-1/control_v11p_sd15_canny.pth",
       "controlnet_strength_2": 0.5,
-      "start_percent_2": 0,
-      "end_percent_2": 0.4,
+      "start_percent_2": 0.2,
+      "end_percent_2": 0.6,
       "switch_3": "On",
       "controlnet_3": "ControlNet-v1-1/control_v11p_sd15_softedge.pth",
       "controlnet_strength_3": 0.6,
@@ -132,7 +132,7 @@
     "inputs": {
       "resolution": 256,
       "image": [
-        "14",
+        "115",
         0
       ]
     },
@@ -155,7 +155,7 @@
   },
   "64": {
     "inputs": {
-      "seed": 517977856977134,
+      "seed": 126124800185203,
       "steps": 8,
       "cfg": 1.6,
       "sampler_name": "lcm",
@@ -258,7 +258,7 @@
   },
   "105": {
     "inputs": {
-      "image": "style8.webp",
+      "image": "style7.webp",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -328,7 +328,7 @@
   },
   "115": {
     "inputs": {
-      "image": "ground_f.jpeg",
+      "image": "ground_.png",
       "upload": "image"
     },
     "class_type": "LoadImage",
