@@ -86,7 +86,7 @@ async function translate(text, lang, cb) {
   }).then((r) => r.json() )
   .then((d) => {
     console.log(d, text, lang);
-    cb(d)
+    cb(d.translatedText)
   })
 }
 
@@ -154,34 +154,29 @@ async function execute_prompt(id, step_handle, context) {
     })
       .then(r => r.json())
       .then(d => {
-        const response = d.response;
-        try {
-          const split_response = response.split(/[\t|\n]+/g).filter(e=> e.length > 0).map((e) => cleanup_response(e))
-          if(split_response.length > 2) {
 
-            const enriched = split_response.slice(0, 3).map((e, i) => {
-              return {
-                text: e,
-                option: i
-              }
-            })
-            const translated = enriched.map((e, i) => {
-              translate(e.text, conversations[id].language, (res) => {
+        const response = d.response;
+        translate(response, "nl", (translated_response) => {
+          try {
+            const split_response = translated_response.split(/[\t|\n]+/g).filter(e=> e.length > 0).map((e) => cleanup_response(e))
+            if(split_response.length > 2) {
+
+              const enriched = split_response.slice(0, 3).map((e, i) => {
                 return {
-                  ...e,
-                  text: res.translatedText
+                  text: e,
+                  option: i
                 }
               })
-            })
-            conversations[id].info[step_handle]["generated"] = translated
-            callback(`GENERATED_OPTIONS/${JSON.stringify(enriched)}`)
-          } else {
-            console.log("redo")
-            execute_prompt(id, step_handle, context)
+              conversations[id].info[step_handle]["generated"] = enriched
+              callback(`GENERATED_OPTIONS/${JSON.stringify(enriched)}`)
+            } else {
+              console.log("redo")
+              execute_prompt(id, step_handle, context)
+            }
+          } catch(e) {
+            console.log(e)
           }
-        } catch(e) {
-          console.log(e)
-        }
+        })
       }) 
   }
 }
