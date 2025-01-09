@@ -28,6 +28,18 @@ const STEPS = [
   "END"
 ];
 
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+app.get('/:uuid', function (req, res) {
+  res.send('Hello World'+req.params.uuid)
+})
+
+app.listen(3001)
+
 function messageHandler(data) { 
   const spl = data.toString().split("/");
   if(spl.length > 1) {
