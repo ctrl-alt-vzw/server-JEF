@@ -164,25 +164,9 @@ async function execute_prompt(id, step_handle, context) {
 
 async function execute_prompt_visual(prompt, context, uuid, handle, style_ref) {
   const replacedPrompt = prompt.replace("[[STEP_VALUE]]", conversations[uuid].info[handle]["selected"])
-  // console.log("SD PROMPT", replacedPrompt)
-  // fetch(`http://${process.env.OLLAMA_HOST}:11434/api/generate`, {
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     model: "llama3.2",
-  //     prompt: `${replacedPrompt}`,
-  //     stream: false
-  //   })
-  // })
-  //   .then(r => r.json())
-  //   .then(d => {
-      // const response = d.response;
-      // console.log(response)
-      queue_prompt(replacedPrompt, uuid, handle, style_ref)
-      pipeline.push(uuid +"_"+handle+".png")
-    // })  
-    // .catch((e) => {
-    //   console.error(e)
-    // })
+  console.log(replacedPrompt)
+  queue_prompt(replacedPrompt, uuid, handle, style_ref)
+  pipeline.push(uuid +"_"+handle+".png")
 }
 
 function cleanup_response(response) {

@@ -41,7 +41,7 @@ export const script = (handle) => {
 		      nl: "Hoe ziet je hoofdpersonage eruit?",
 		      fr: "A quoi ressemble votre personnage principal?",
 		    },
-		    visual: "[[STEP_VALUE]] character, legs, arms, hero, game asset, high resolution",
+		    visual: "(white background:1.8) [[STEP_VALUE]] character, legs, arms, hero, game asset, high resolution",
 		    prompt: prepend +"Give me 3 descriptions of how the main character looks. Include Hair color, clothes, colorful highlights, add some details." 
 		  }
 	  	break;
@@ -80,7 +80,7 @@ export const script = (handle) => {
 		      nl: "Hoe zou je de slechterik beschrijven?",
 		      fr: "Comment décririez-vous le méchant?",
 		    },
-		    visual: vprepend + "Generate a stable diffusion prompt for the main antagonist of the game, based on the description",
+		    visual: "(white background:1.8) [[STEP_VALUE]] character, legs, arms, hero, game asset, high resolution",
 		    prompt: prepend + "Give me 3 creative descriptions of the villain character. Include Hair color, clothes, colorful highlights." 
 		  }
 	  	break;
@@ -93,7 +93,7 @@ export const script = (handle) => {
 		      nl: "En wie zijn de assistenten van de slechterik?",
 		      fr: "Et qui sont les assistants de la scélérat ?",
 		    },
-		    visual: vprepend + "Generate a stable diffusion prompt for the henchmen of the game, based on the description, make sure to include (white background:1.2)",
+		    visual: "(white background:1.8) [[STEP_VALUE]], game asset, high resolution",
 		    prompt: prepend + "what creative  enemies could we encounter that the antagonist puts in our path" 
 		  }
 	  	break;
@@ -106,7 +106,7 @@ export const script = (handle) => {
 		      nl: "Waarmee kan je hoofdpersonage zich verdedigen?",
 		      fr: "Que peut utiliser votre personnage principal pour se défendre ?",
 		    },
-		    visual: vprepend + "Generate a stable diffusion prompt for the weapon for the main character of the game, based on the description",
+		    visual: "(white background:1.8) [[STEP_VALUE]], game asset, high resolution",
 		    prompt: prepend + "Give me 3 creative  examples of weapons the player can use?" 
 		  }
 	  	break;
@@ -132,7 +132,7 @@ export const script = (handle) => {
 		      nl: "Perfect! Je wereld zal bewoond worden door andere mensen. Doorheen je spel kunnen deze mensen je speler een tip geven om het spel te spelen. Wat is de naam van de persoon die we ontmoeten?",
 		      fr: "Parfait! Votre monde sera habité par d'autres, nous en définissons quelques-uns à rencontrer dans le jeu. Quel est le nom de la personne que nous rencontrons ?",
 		    },
-		    visual: vprepend + "Generate a stable diffusion prompt for the non-playable character of the game, based on the description",
+		    visual: "(white background:1.8) [[STEP_VALUE]] character, legs, arms, NPC, game asset, high resolution",
 		    prompt: prepend + "give me three inhabitants of the world that the player encounters in the game, give a name and profession" 
 		  }
 			break;
