@@ -15,7 +15,7 @@ export const script = (handle) => {
 		      nl: "Welkom! je staat op het punt je eigen spel te maken. Via een aantal vragen zal ik proberen samen met jou een verhaal op te bouwen waarover het spel kan gaan. Hierna kan je je eigen spel spelen op de andere computer. We beginnen eraan met de eerste vraag; In welke tijdsperiode zou je graag willen dat je spel zich afspeelt?",
 		      fr: "Bienvenue! vous êtes sur le point de créer votre propre jeu. À travers un certain nombre de questions, je vais essayer de construire avec vous une histoire sur ce que peut être le jeu. Après cela, vous pouvez jouer à votre propre jeu sur l'autre ordinateur. Nous commencerons par la première question; À quelle période se déroule votre jeu ?",
 		    },
-		    visual: vprepend + "Generate a prompt for stable diffusion to generate a visual for the tileset environment, topdown, 512x512 tiles, for the context provided before",
+		    visual: "[[STEP_VALUE]] tileset environment, topdown, 512x512 tiles",
 		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 combinations of creative and weird timeperiods and locations a computer game for children can take place in` 
 		  }
 	  	break;
@@ -41,7 +41,7 @@ export const script = (handle) => {
 		      nl: "Hoe ziet je hoofdpersonage eruit?",
 		      fr: "A quoi ressemble votre personnage principal?",
 		    },
-		    visual: vprepend + "Generate a stable diffusion prompt for the main character of the game, based on the description",
+		    visual: "[[STEP_VALUE]] character, legs, arms, hero, game asset, high resolution",
 		    prompt: prepend +"Give me 3 descriptions of how the main character looks. Include Hair color, clothes, colorful highlights, add some details." 
 		  }
 	  	break;
