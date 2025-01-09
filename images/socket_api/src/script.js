@@ -41,7 +41,7 @@ export const script = (handle) => {
 		      nl: "Hoe ziet je hoofdpersonage eruit?",
 		      fr: "A quoi ressemble votre personnage principal?",
 		    },
-		    visual: "(white background:1.8) , 2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, hero, game asset",
+		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, hero, game asset",
 		    prompt: prepend +"Give me 3 different descriptions of how the main character looks. Include the name of the character and a basic description of clothes" 
 		  }
 	  	break;
@@ -80,7 +80,7 @@ export const script = (handle) => {
 		      nl: "Hoe zou je de slechterik beschrijven?",
 		      fr: "Comment décririez-vous le méchant?",
 		    },
-		    visual: "(white background:1.8) , 2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, game asset",
+		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, game asset",
 		    prompt: prepend + "Give me 3 creative descriptions of the villain character.  Include the name of the character and a basic description of clothes" 
 		  }
 	  	break;
@@ -93,7 +93,7 @@ export const script = (handle) => {
 		      nl: "En wie zijn de assistenten van de slechterik?",
 		      fr: "Et qui sont les assistants de la scélérat ?",
 		    },
-		    visual: "(white background:1.8) , 2D drawing of [[STEP_VALUE]] from [[CONTEXT]],, game asset",
+		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]],, game asset",
 		    prompt: prepend + "what creative  enemies could we encounter that the antagonist puts in our path" 
 		  }
 	  	break;
@@ -106,7 +106,7 @@ export const script = (handle) => {
 		      nl: "Waarmee kan je hoofdpersonage zich verdedigen?",
 		      fr: "Que peut utiliser votre personnage principal pour se défendre ?",
 		    },
-		    visual: "(white background:1.8) , 2D drawing of [[STEP_VALUE]] from [[CONTEXT]], single object, center of the screen, game asset",
+		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]], single object, center of the screen, game asset",
 		    prompt: prepend + "Give me 3 creative  examples of weapons the player can use?" 
 		  }
 	  	break;
@@ -132,7 +132,7 @@ export const script = (handle) => {
 		      nl: "Perfect! Je wereld zal bewoond worden door andere mensen. Doorheen je spel kunnen deze mensen je speler een tip geven om het spel te spelen. Wat is de naam van de persoon die we ontmoeten?",
 		      fr: "Parfait! Votre monde sera habité par d'autres, nous en définissons quelques-uns à rencontrer dans le jeu. Quel est le nom de la personne que nous rencontrons ?",
 		    },
-		    visual: "(white background:1.8) , 2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, NPC, game asset",
+		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, NPC, game asset",
 		    prompt: prepend + "give me three inhabitants of the world that the player encounters in the game, give a name and profession" 
 		  }
 			break;
