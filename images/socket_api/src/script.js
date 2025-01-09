@@ -42,7 +42,7 @@ export const script = (handle) => {
 		      fr: "A quoi ressemble votre personnage principal?",
 		    },
 		    visual: "(white background:1.8) , 2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, hero, game asset",
-		    prompt: prepend +"Give me 3 descriptions of how the main character looks. Include the name of the character and a basic description of clothes" 
+		    prompt: prepend +"Give me 3 different descriptions of how the main character looks. Include the name of the character and a basic description of clothes" 
 		  }
 	  	break;
 	  case "GOAL": 

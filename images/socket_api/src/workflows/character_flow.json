@@ -34,7 +34,7 @@
     "inputs": {
       "switch_1": "Off",
       "controlnet_1": "1.5/control_v11p_sd15_lineart_fp16.safetensors",
-      "controlnet_strength_1": 0.5,
+      "controlnet_strength_1": 0.2,
       "start_percent_1": 0,
       "end_percent_1": 1,
       "switch_2": "Off",
