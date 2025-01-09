@@ -81,10 +81,7 @@ services:
               capabilities: [gpu]
 
   libretranslate-cuda:
-    container_name: libretranslate
-    build:
-      context: .
-      dockerfile: libretranslate/cuda.Dockerfile
+    image: libretranslate
     restart: unless-stopped
     ports:
       - "5000:5000"
