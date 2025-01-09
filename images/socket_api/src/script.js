@@ -15,7 +15,7 @@ export const script = (handle) => {
 		      nl: "Welkom! je staat op het punt je eigen spel te maken. Via een aantal vragen zal ik proberen samen met jou een verhaal op te bouwen waarover het spel kan gaan. Hierna kan je je eigen spel spelen op de andere computer. We beginnen eraan met de eerste vraag; In welke tijdsperiode zou je graag willen dat je spel zich afspeelt?",
 		      fr: "Bienvenue! vous êtes sur le point de créer votre propre jeu. À travers un certain nombre de questions, je vais essayer de construire avec vous une histoire sur ce que peut être le jeu. Après cela, vous pouvez jouer à votre propre jeu sur l'autre ordinateur. Nous commencerons par la première question; À quelle période se déroule votre jeu ?",
 		    },
-		    visual: "[[STEP_VALUE]], tileset environment, topdown, 512x512 tiles, (top view:2)",
+		    visual: "2D drawing of a game asset, environment tileset of [[STEP_VALUE]], topdown, 512x512 tiles, (top view:2), drawing",
 		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 combinations of creative and weird timeperiods and locations a computer game for children can take place in` 
 		  }
 	  	break;
