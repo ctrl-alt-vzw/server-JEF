@@ -166,6 +166,7 @@ async function execute_prompt_visual(prompt, context, uuid, handle, style_ref) {
   const el = conversations[uuid].info[handle];
   const promptpiece = el["generated"][el["selected"]].text
   const replacedPrompt = prompt.replace("[[STEP_VALUE]]", promptpiece)
+  console.log(conversations[uuid].style_ref)
   console.log("PROMPT:", replacedPrompt)
   queue_prompt(replacedPrompt, uuid, handle, style_ref)
   pipeline.push(uuid +"_"+handle+".png")
