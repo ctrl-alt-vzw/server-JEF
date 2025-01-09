@@ -35,7 +35,11 @@ app.get('/', function (req, res) {
   res.send('Hello World')
 })
 app.get('/:uuid', function (req, res) {
-  res.send('Hello World'+req.params.uuid)
+  db.select("*").table("games").where({ uuid: req.params.uuid}).then((data) => {
+    res.send(data)
+  }).catch((e) => {
+    res.status(404).send()
+  })
 })
 
 app.listen(3001)
