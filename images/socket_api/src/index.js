@@ -74,6 +74,19 @@ function messageHandler(data) {
   }
 }
 
+async function translate(text, lang, cb) {
+  await fetch("http://192.168.0.148:5000/translate", {
+    method: "POST",
+    body: JSON.stringify({
+      q: text,
+      source: "en",
+      target: lang,
+    }),
+    headers: { "Content-Type": "application/json" },
+  }).then((r) => r.json() )
+  .then((d) => cb(d))
+}
+
 async function handle_selection(uuid, step_id, selected) {
   conversations[uuid].info[STEPS[step_id]]["selected"] = selected
 
@@ -148,6 +161,11 @@ async function execute_prompt(id, step_handle, context) {
                 text: e,
                 option: i
               }
+            })
+            enriched.forEach((e, i) => {
+              translate(e.text, conversations[id].language, (res) => {
+                conversations[id].info[step_handle]["generated"][i].text = res.translatedText
+              })
             })
             conversations[id].info[step_handle]["generated"] = enriched
             callback(`GENERATED_OPTIONS/${JSON.stringify(enriched)}`)
