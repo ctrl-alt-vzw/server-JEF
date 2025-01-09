@@ -232,7 +232,7 @@
   },
   "104": {
     "inputs": {
-      "weight": 1,
+      "weight": 0.2,
       "weight_type": "strong style transfer",
       "combine_embeds": "concat",
       "start_at": 0.1,
