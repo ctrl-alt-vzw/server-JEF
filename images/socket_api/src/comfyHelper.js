@@ -34,7 +34,7 @@ export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
   flow["104"]["inputs"]["weight_type"] = "weak input"
   flow["64"]["inputs"]["steps"] = 32
   flow["64"]["inputs"]["cfg"] = 8
-  flow["10"]["inputs"]["positive"] = prompt_in + ", 2d, game asset, (top view:1.4)"
+  flow["10"]["inputs"]["positive"] = prompt_in + ", 2d, game asset"
   flow["64"]["inputs"]["seed"] = Math.random() * 10000
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type
   flow["110"]["inputs"]["path"] = "/home/jan/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
