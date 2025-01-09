@@ -164,10 +164,12 @@ async function execute_prompt(id, step_handle, context) {
 
 async function execute_prompt_visual(prompt, context, uuid, handle, style_ref) {
   const el = conversations[uuid].info[handle];
+  const context = conversations[uuid].info.ENVIRONMENT.generated[conversations[uuid].info.ENVIRONMENT.selected].text
   const promptpiece = el["generated"][el["selected"]].text
-  const replacedPrompt = prompt.replace("[[STEP_VALUE]]", promptpiece)
-  console.log(conversations[uuid].style_ref)
-  console.log("PROMPT:", replacedPrompt)
+  const tmp_prompt = prompt.replace("[[STEP_VALUE]]", promptpiece)
+  const replacedPrompt = tmp_prompt.replace("[[CONTEXT]]", context)
+  console.log("STYLE_REF: ", conversations[uuid].style_ref)
+  console.log("PROMPT: ", replacedPrompt)
   queue_prompt(replacedPrompt, uuid, handle, style_ref)
   pipeline.push(uuid +"_"+handle+".png")
 }
