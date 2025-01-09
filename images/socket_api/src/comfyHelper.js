@@ -12,14 +12,17 @@ import env_flow from "./workflows/environment_flow.json" with { type: "json" };
 import character_flow from "./workflows/character_flow.json" with { type: "json" };
 import base_flow from "./workflows/base_flow.json" with { type: "json" };
 import style_flow from "./workflows/style_flow.json" with { type: "json" };
+import rect_flow from "./workflows/rect_flow.json" with { type: "json" };
+import sphere_flow from "./workflows/sphere_flow.json" with { type: "json" };
 
 
 const flows = {
   "ENVIRONMENT": env_flow,
   "PROTAGONIST_LOOK": character_flow,
   "ANTAGONIST_LOOK": character_flow,
-  "HENCHMEN": base_flow,
+  "HENCHMEN": sphere_flow,
   "NPC": character_flow,
+  "WEAPON": rect_flow,
   "STYLE": style_flow
 }
 
