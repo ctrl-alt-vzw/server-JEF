@@ -188,6 +188,7 @@ async function initialise_conversation(uuid) {
 async function createNewGame(id) {
   // insert new game into DB
   const styles = ["style1.webp", "style2.webp", "style3.webp", "style4.webp", "style5.webp", "style6.webp", "style7.webp", "style8.webp", "style9.webp", "style10.webp", "style11.webp" ]
+  // style10.webp
 
   db.insert({
     UUID: generateUUID(),
@@ -226,8 +227,6 @@ wss.on('connection', function connection(_ws) {
   ws.on('message', function message(data) {
     messageHandler(data)
   });
-
-  // callback("IMAGE/.../f88155b3-62fe-4e5f-b36a-8e22c565c583_PROTAGONIST_LOOK.png")
 });
 async function initialise() {
   console.log("connect")
