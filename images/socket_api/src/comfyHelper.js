@@ -10,9 +10,11 @@
 // #this is the one for the default workflow
 import env_flow from "./workflows/environment_flow.json" with { type: "json" };
 import character_flow from "./workflows/character_flow.json" with { type: "json" };
+import henchmen_flow from "./workflows/henchmen_flow.json" with { type: "json" };
 import base_flow from "./workflows/base_flow.json" with { type: "json" };
 import style_flow from "./workflows/style_flow.json" with { type: "json" };
 import rect_flow from "./workflows/rect_flow.json" with { type: "json" };
+import weapon_flow from "./workflows/weapon_flow.json" with { type: "json" };
 import sphere_flow from "./workflows/sphere_flow.json" with { type: "json" };
 
 
@@ -20,10 +22,9 @@ const flows = {
   "ENVIRONMENT": env_flow,
   "PROTAGONIST_LOOK": character_flow,
   "ANTAGONIST_LOOK": character_flow,
-  "HENCHMEN": sphere_flow,
+  "HENCHMEN": henchmen_flow,
   "NPC": character_flow,
-  "WEAPON": rect_flow,
-  "STYLE": style_flow
+  "WEAPON": weapon_flow
 }
 
 export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
@@ -32,14 +33,10 @@ export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
     flow = flows[type]
   }
 
-  flow["105"]["inputs"]["image"] = `${style_ref}`
-  // flow["104"]["inputs"]["weight_type"] = "style transfer"
-  // flow["64"]["inputs"]["steps"] = 32
-  // flow["64"]["inputs"]["cfg"] = 7
-  flow["10"]["inputs"]["positive"] = prompt_in
+  flow["6"]["inputs"]["positive"] = prompt_in
   flow["64"]["inputs"]["seed"] = Math.random() * 10000
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type
-  flow["110"]["inputs"]["path"] = "/home/jan/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
+  flow["12"]["inputs"]["path"] = "/home/jan/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
 
   const p = {"prompt": flow}
   const url = 'http://0.0.0.0:8188/prompt'; 

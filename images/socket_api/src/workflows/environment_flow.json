@@ -1,278 +1,87 @@
 {
-  "10": {
+  "3": {
     "inputs": {
-      "ckpt_name": "SD1.5/v1-5-pruned-emaonly.ckpt",
-      "vae_name": "Baked VAE",
-      "clip_skip": -2,
-      "lora_name": "None",
-      "lora_model_strength": 1,
-      "lora_clip_strength": 1,
-      "positive": "2D drawing, environment tileset of A futuristic underwater city on an oceanic research station. include buildings, plantsm and other elements, topdown, 512x512 tiles, (top view:1.2), drawing, clear background",
-      "negative": "(worst quality, low quality, normal quality, lowres oversaturated, undersaturated, overexposed, underexposed, grayscale, bw, bad photo, bad photography, bad art, nude, sexual, explicit:1.4), (busty, developed, breast, breasts:1.4)(watermark, signature, text font, username, error, logo, words, letters, digits, autograph, trademark, name:1.2), (blur, blurry, grainy) (accessories, background, bags:1.4), (bad hands, bad anatomy, bad body, bad face, bad teeth, bad arms, bad legs, deformities:1.3) reflections",
-      "token_normalization": "none",
-      "weight_interpretation": "comfy",
-      "empty_latent_width": [
-        "65",
+      "seed": 785422573727638,
+      "steps": 8,
+      "cfg": 1.4000000000000001,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "sgm_uniform",
+      "denoise": 0.9,
+      "model": [
+        "28",
         0
       ],
-      "empty_latent_height": [
-        "65",
-        1
-      ],
-      "batch_size": 1,
-      "cnet_stack": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "Efficient Loader",
-    "_meta": {
-      "title": "Efficient Loader"
-    }
-  },
-  "11": {
-    "inputs": {
-      "switch_1": "On",
-      "controlnet_1": "ControlNet-v1-1/control_v11p_sd15_scribble.pth",
-      "controlnet_strength_1": 0.8,
-      "start_percent_1": 0,
-      "end_percent_1": 0.8,
-      "switch_2": "On",
-      "controlnet_2": "ControlNet-v1-1/control_v11p_sd15_canny.pth",
-      "controlnet_strength_2": 0.5,
-      "start_percent_2": 0.2,
-      "end_percent_2": 0.6,
-      "switch_3": "On",
-      "controlnet_3": "ControlNet-v1-1/control_v11p_sd15_softedge.pth",
-      "controlnet_strength_3": 0.6,
-      "start_percent_3": 0.6,
-      "end_percent_3": 0.8,
-      "image_1": [
+      "positive": [
         "26",
         0
       ],
-      "image_2": [
-        "12",
-        0
+      "negative": [
+        "26",
+        1
       ],
-      "image_3": [
-        "15",
+      "latent_image": [
+        "5",
         0
       ]
     },
-    "class_type": "CR Multi-ControlNet Stack",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "🕹️ CR Multi-ControlNet Stack"
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "FLUX1/flux1-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "A grid of 4x4 isometric elements for a  game set prehistoric.\n\n\nthe first row of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles.\n\nthe elements bellow th first half are nature elements, and other small objects which can block the path of the player.\n\nwhite background\n\nmake the artwork bright, colorful, and playful in an illustrative, comic book style.",
+      "clip": [
+        "28",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "text, watermark, pixel art",
+      "clip": [
+        "28",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
     }
   },
   "12": {
     "inputs": {
-      "low_threshold": 100,
-      "high_threshold": 200,
-      "resolution": 256,
-      "image": [
-        "115",
-        0
-      ]
-    },
-    "class_type": "CannyEdgePreprocessor",
-    "_meta": {
-      "title": "Canny Edge"
-    }
-  },
-  "13": {
-    "inputs": {
-      "images": [
-        "12",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "14": {
-    "inputs": {
-      "image": "ground.png",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "15": {
-    "inputs": {
-      "safe": "disable",
-      "resolution": 512,
-      "image": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "HEDPreprocessor",
-    "_meta": {
-      "title": "HED Soft-Edge Lines"
-    }
-  },
-  "16": {
-    "inputs": {
-      "images": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "26": {
-    "inputs": {
-      "resolution": 256,
-      "image": [
-        "115",
-        0
-      ]
-    },
-    "class_type": "ScribblePreprocessor",
-    "_meta": {
-      "title": "Scribble Lines"
-    }
-  },
-  "43": {
-    "inputs": {
-      "images": [
-        "26",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "64": {
-    "inputs": {
-      "seed": 126124800185203,
-      "steps": 8,
-      "cfg": 1.6,
-      "sampler_name": "lcm",
-      "scheduler": "sgm_uniform",
-      "denoise": 1,
-      "preview_method": "auto",
-      "vae_decode": "true",
-      "model": [
-        "114",
-        0
-      ],
-      "positive": [
-        "10",
-        1
-      ],
-      "negative": [
-        "10",
-        2
-      ],
-      "latent_image": [
-        "10",
-        3
-      ],
-      "optional_vae": [
-        "10",
-        4
-      ]
-    },
-    "class_type": "KSampler (Efficient)",
-    "_meta": {
-      "title": "KSampler (Efficient)"
-    }
-  },
-  "65": {
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "aspect_ratio": "custom",
-      "swap_dimensions": "Off",
-      "upscale_factor": 1,
-      "prescale_factor": 1,
-      "batch_size": 1
-    },
-    "class_type": "CR Aspect Ratio",
-    "_meta": {
-      "title": "🔳 CR Aspect Ratio"
-    }
-  },
-  "99": {
-    "inputs": {
-      "filename_prefix": "tiles",
-      "images": [
-        "64",
-        5
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "103": {
-    "inputs": {
-      "preset": "STANDARD (medium strength)",
-      "model": [
-        "10",
-        0
-      ]
-    },
-    "class_type": "IPAdapterUnifiedLoader",
-    "_meta": {
-      "title": "IPAdapter Unified Loader"
-    }
-  },
-  "104": {
-    "inputs": {
-      "weight": 0.8,
-      "weight_type": "style transfer",
-      "combine_embeds": "concat",
-      "start_at": 0,
-      "end_at": 1,
-      "embeds_scaling": "V only",
-      "model": [
-        "103",
-        0
-      ],
-      "ipadapter": [
-        "103",
-        1
-      ],
-      "image": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "IPAdapterAdvanced",
-    "_meta": {
-      "title": "IPAdapter Advanced"
-    }
-  },
-  "105": {
-    "inputs": {
-      "image": "style7.webp",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "110": {
-    "inputs": {
-      "path": "",
+      "path": "/Users/janeveraert/Documents/CTRL + ALT/projects/JEF/server/_volumes/images/96778eec-d04a-45cf-a383-66a32848df7a/TEST.png",
       "quality": 100,
       "images": [
-        "64",
-        5
+        "44",
+        0
       ]
     },
     "class_type": "ImageSaver",
@@ -280,10 +89,159 @@
       "title": "Image Save"
     }
   },
-  "111": {
+  "15": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "16": {
+    "inputs": {
+      "image": "objects (5).png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "19": {
+    "inputs": {
+      "preprocessor": "canny",
+      "sd_version": "sdxl",
+      "resolution": 512,
+      "preprocessor_override": "None",
+      "image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "AV_ControlNetPreprocessor",
+    "_meta": {
+      "title": "ControlNet Preprocessor"
+    }
+  },
+  "21": {
+    "inputs": {
+      "mode": "rescale",
+      "supersample": "true",
+      "resampling": "lanczos",
+      "rescale_factor": 2,
+      "resize_width": 512,
+      "resize_height": 512,
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "Image Resize",
+    "_meta": {
+      "title": "Image Resize"
+    }
+  },
+  "22": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
+    }
+  },
+  "24": {
+    "inputs": {
+      "control_net_name": "FLUX.1/flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "26": {
+    "inputs": {
+      "strength": 0.8,
+      "start_percent": 0,
+      "end_percent": 0.3,
+      "positive": [
+        "27",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "control_net": [
+        "24",
+        0
+      ],
+      "image": [
+        "19",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "27": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "28": {
+    "inputs": {
+      "lora_name": "Fluxartis 28.11A.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "44": {
     "inputs": {
       "model": "RMBG-2.0",
-      "sensitivity": 1,
+      "sensitivity": 0.55,
       "process_res": 512,
       "mask_blur": 0,
       "mask_offset": 0,
@@ -291,8 +249,8 @@
       "invert_output": false,
       "optimize": "default",
       "image": [
-        "64",
-        5
+        "22",
+        0
       ]
     },
     "class_type": "RMBG",
@@ -300,10 +258,10 @@
       "title": "Remove Background (RMBG)"
     }
   },
-  "112": {
+  "45": {
     "inputs": {
       "images": [
-        "111",
+        "22",
         0
       ]
     },
@@ -312,28 +270,16 @@
       "title": "Preview Image"
     }
   },
-  "114": {
+  "46": {
     "inputs": {
-      "lora_name": "Hyper-SD/Hyper-SD15-8steps-lora.safetensors",
-      "strength_model": 1,
-      "model": [
-        "104",
+      "images": [
+        "19",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "LoraLoaderModelOnly"
-    }
-  },
-  "115": {
-    "inputs": {
-      "image": "ground_.png",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
+      "title": "Preview Image"
     }
   }
 }

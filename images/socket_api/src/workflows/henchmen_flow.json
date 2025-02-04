@@ -1,37 +1,7 @@
 {
-  "3": {
-    "inputs": {
-      "seed": 375071848161833,
-      "steps": 10,
-      "cfg": 1.3,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "sgm_uniform",
-      "denoise": 0.9,
-      "model": [
-        "28",
-        0
-      ],
-      "positive": [
-        "26",
-        0
-      ],
-      "negative": [
-        "26",
-        1
-      ],
-      "latent_image": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
   "4": {
     "inputs": {
-      "ckpt_name": "FLUX1/flux1-dev-fp8.safetensors"
+      "ckpt_name": "FLUX1/flux1-schnell-fp8.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -51,7 +21,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset pack for a whimsical, Mandarin Chinese-era warrior.\n\nThe character should have a mythical, ancient Chinese-inspired appearance, drawing from the aesthetics of the Tang and Ming dynasties. It could feature ornate lamellar armor, flowing silk sashes, intricate golden engravings, and a regal helmet with decorative tassels or dragon motifs, giving it an elegant yet powerful feel.\n\nThe asset pack should be arranged as follows:\n\n    Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand.\n    Bottom left: Two legs, feet pointing downward—left and right.\n    Right side: The torso and head, facing forward to the right.\n\nThe artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel.\n\nEnsure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.\n",
+      "text": "Design an isolated isometric game asset of an angry, floating, underwater coral warrior.\n\nThe warrior should be a sentient, armored coral creature, resembling an ancient guardian of the deep. Its body should be made of twisting coral, seaweed, and bioluminescent barnacles, giving it an organic yet formidable appearance. It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance.\n\nIt should be floating in the water with no ground below it, with strands of seaweed and tiny bubbles drifting around to enhance the underwater effect.\n\nThe style should be bright, colorful, and playful, suited for a 9-year-old, with a comic book-style, illustrative, and cel-shaded aesthetic to add depth and character.\n\nit should be looking to the left\n\nEnsure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
       "clip": [
         "28",
         1
@@ -75,20 +45,6 @@
       "title": "CLIP Text Encode (Prompt)"
     }
   },
-  "12": {
-    "inputs": {
-      "path": "/Users/janeveraert/Documents/CTRL + ALT/projects/JEF/server/_volumes/images/96778eec-d04a-45cf-a383-66a32848df7a/TEST.png",
-      "quality": 100,
-      "images": [
-        "22",
-        0
-      ]
-    },
-    "class_type": "ImageSaver",
-    "_meta": {
-      "title": "Image Save"
-    }
-  },
   "15": {
     "inputs": {
       "filename_prefix": "ComfyUI",
@@ -104,7 +60,7 @@
   },
   "16": {
     "inputs": {
-      "image": "bot_base (2).png",
+      "image": "henchemen_v3.png",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -153,7 +109,7 @@
       "temporal_size": 64,
       "temporal_overlap": 8,
       "samples": [
-        "3",
+        "48",
         0
       ],
       "vae": [
@@ -177,9 +133,9 @@
   },
   "26": {
     "inputs": {
-      "strength": 0.6,
+      "strength": 0.7000000000000001,
       "start_percent": 0.05,
-      "end_percent": 0.8,
+      "end_percent": 0.85,
       "positive": [
         "27",
         0
@@ -280,6 +236,36 @@
     "class_type": "PreviewImage",
     "_meta": {
       "title": "Preview Image"
+    }
+  },
+  "48": {
+    "inputs": {
+      "seed": 530846592692507,
+      "steps": 10,
+      "cfg": 1.1,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "sgm_uniform",
+      "denoise": 1,
+      "model": [
+        "28",
+        0
+      ],
+      "positive": [
+        "26",
+        0
+      ],
+      "negative": [
+        "26",
+        1
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
     }
   }
 }
