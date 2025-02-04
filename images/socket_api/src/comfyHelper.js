@@ -34,7 +34,7 @@ export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
   }
 
   flow["6"]["inputs"]["positive"] = prompt_in
-  flow["64"]["inputs"]["seed"] = Math.random() * 10000
+  flow["3"]["inputs"]["seed"] = Math.random() * 10000
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type
   flow["12"]["inputs"]["path"] = "/home/jan/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
 
