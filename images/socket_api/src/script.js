@@ -15,7 +15,7 @@ export const script = (handle) => {
 		      nl: "Welkom! je staat op het punt je eigen spel te maken. Via een aantal vragen zal ik proberen samen met jou een verhaal op te bouwen waarover het spel kan gaan. Hierna kan je je eigen spel spelen op de andere computer. We beginnen eraan met de eerste vraag; In welke tijdsperiode zou je graag willen dat je spel zich afspeelt?",
 		      fr: "Bienvenue! vous êtes sur le point de créer votre propre jeu. À travers un certain nombre de questions, je vais essayer de construire avec vous une histoire sur ce que peut être le jeu. Après cela, vous pouvez jouer à votre propre jeu sur l'autre ordinateur. Nous commencerons par la première question; À quelle période se déroule votre jeu ?",
 		    },
-		    visual: "2D drawing, environment tileset of [[STEP_VALUE]], topdown, 512x512 tiles, (top view:1.2), drawing",
+		    visual: "A grid of 4x4 isometric elements for a  game set [[STEP_VALUE]]. \n the first row of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles. \n the elements bellow th first half are nature elements, and other small objects which can block the path of the player. \n white background \n make the artwork bright, colorful, and playful in an illustrative, comic book style.g",
 		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 combinations of creative and weird timeperiods and locations a computer game for children can take place in` 
 		  }
 	  	break;
@@ -41,7 +41,7 @@ export const script = (handle) => {
 		      nl: "Hoe ziet je hoofdpersonage eruit?",
 		      fr: "A quoi ressemble votre personnage principal?",
 		    },
-		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, hero, game asset",
+		    visual: "Design an isolated isometric game asset pack for a , [[CONTEXT]] character named [[STEP_VALUE]]. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
 		    prompt: prepend +"Give me 3 different descriptions of how the main character looks. Include the name of the character and a basic description of clothes" 
 		  }
 	  	break;
@@ -80,7 +80,7 @@ export const script = (handle) => {
 		      nl: "Hoe zou je de slechterik beschrijven?",
 		      fr: "Comment décririez-vous le méchant?",
 		    },
-		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, game asset",
+		    visual: "Design an isolated isometric game asset pack for a villain, [[CONTEXT]] character named [[STEP_VALUE]]. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
 		    prompt: prepend + "Give me 3 creative descriptions of the villain character.  Include the name of the character and a basic description of clothes" 
 		  }
 	  	break;
@@ -93,7 +93,7 @@ export const script = (handle) => {
 		      nl: "En wie zijn de assistenten van de slechterik?",
 		      fr: "Et qui sont les assistants de la scélérat ?",
 		    },
-		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]],, game asset",
+		    visual: "Design an isolated isometric game asset of an angry, floating, underwater coral warrior. \n The warrior should be a sentient creature from [[CONTEXT]]It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a comic book-style, illustrative, and cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
 		    prompt: prepend + "what creative  enemies could we encounter that the antagonist puts in our path" 
 		  }
 	  	break;
@@ -106,7 +106,7 @@ export const script = (handle) => {
 		      nl: "Waarmee kan je hoofdpersonage zich verdedigen?",
 		      fr: "Que peut utiliser votre personnage principal pour se défendre ?",
 		    },
-		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]], single object, center of the screen, game asset",
+		    visual: " \n Design an isolated isometric game asset of a themed weapon set, from [[CONTEXT]], arranged from top to bottom in a left-to-right perspective. \n A handgun (top) and A melee weapon (bottom), being [[STEP_VALUE]] \n All weapons should be floating in an empty, evenly colored background, making them easy to integrate into a game engine. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative, and cel-shaded aesthetic that adds depth . \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.",
 		    prompt: prepend + "Give me 3 creative  examples of weapons the player can use?" 
 		  }
 	  	break;
@@ -132,7 +132,7 @@ export const script = (handle) => {
 		      nl: "Perfect! Je wereld zal bewoond worden door andere mensen. Doorheen je spel kunnen deze mensen je speler een tip geven om het spel te spelen. Wat is de naam van de persoon die we ontmoeten?",
 		      fr: "Parfait! Votre monde sera habité par d'autres, nous en définissons quelques-uns à rencontrer dans le jeu. Quel est le nom de la personne que nous rencontrons ?",
 		    },
-		    visual: "2D drawing of [[STEP_VALUE]] from [[CONTEXT]], character, legs, arms, NPC, game asset",
+		    visual: "2Design an isolated isometric game asset pack for a NPC, [[CONTEXT]] character named [[STEP_VALUE]]. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
 		    prompt: prepend + "give me three inhabitants of the world that the player encounters in the game, give a name and profession" 
 		  }
 			break;
