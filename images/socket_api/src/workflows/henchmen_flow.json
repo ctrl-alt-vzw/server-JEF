@@ -109,7 +109,7 @@
       "temporal_size": 64,
       "temporal_overlap": 8,
       "samples": [
-        "48",
+        "3",
         0
       ],
       "vae": [
@@ -238,7 +238,7 @@
       "title": "Preview Image"
     }
   },
-  "48": {
+  "3": {
     "inputs": {
       "seed": 530846592692507,
       "steps": 10,

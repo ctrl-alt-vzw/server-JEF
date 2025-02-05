@@ -28,7 +28,7 @@ const flows = {
 }
 
 export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
-  let flow = base_flow;
+  let flow = {...base_flow};
   if(flows[type]) {
     flow = flows[type]
   }
