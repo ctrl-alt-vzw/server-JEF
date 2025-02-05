@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 530846592692507,
+      "seed": 971121823259200,
       "steps": 10,
-      "cfg": 1.1,
+      "cfg": 1.4000000000000001,
       "sampler_name": "dpmpp_2m",
       "scheduler": "sgm_uniform",
       "denoise": 1,
@@ -41,7 +41,7 @@
   "5": {
     "inputs": {
       "width": 512,
-      "height": 512,
+      "height": 256,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset of an angry, floating, underwater coral warrior.\n\nThe warrior should be a sentient, armored coral creature, resembling an ancient guardian of the deep. Its body should be made of twisting coral, seaweed, and bioluminescent barnacles, giving it an organic yet formidable appearance. It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance.\n\nIt should be floating in the water with no ground below it, with strands of seaweed and tiny bubbles drifting around to enhance the underwater effect.\n\nThe style should be bright, colorful, and playful, suited for a 9-year-old, with a comic book-style, illustrative, and cel-shaded aesthetic to add depth and character.\n\nit should be looking to the left\n\nEnsure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+      "text": "Create a floating, isolated text panel designed for use in a game engine. The panel should have a bright, detailed, and colorful aesthetic, fitting the theme of candyland. Use a comic book-style, illustrative, and cel-shaded look to add depth.\n\n    Background & Integration: The panel should be isolated against a flat, evenly colored background, making it easy to integrate into a game engine.\n\n    Text Area: Leave a clearly defined space in the center for displaying in-game text, ensuring readability while maintaining stylistic details around the borders.make the spacing to the borders big enough",
       "clip": [
         "28",
         1
@@ -75,6 +75,20 @@
       "title": "CLIP Text Encode (Prompt)"
     }
   },
+  "12": {
+    "inputs": {
+      "path": "/home/jan/Documents/server-JEF/_volumes/images/8070e2cd-6380-441b-adb3-b98319d0923a_WEAPON.png",
+      "quality": 100,
+      "images": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "ImageSaver",
+    "_meta": {
+      "title": "Image Save"
+    }
+  },
   "15": {
     "inputs": {
       "filename_prefix": "ComfyUI",
@@ -90,7 +104,7 @@
   },
   "16": {
     "inputs": {
-      "image": "henchemen_v3.png",
+      "image": "panel_placeholder (1).png",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -163,9 +177,9 @@
   },
   "26": {
     "inputs": {
-      "strength": 0.7000000000000001,
-      "start_percent": 0.05,
-      "end_percent": 0.85,
+      "strength": 0.6,
+      "start_percent": 0,
+      "end_percent": 1,
       "positive": [
         "27",
         0
@@ -266,20 +280,6 @@
     "class_type": "PreviewImage",
     "_meta": {
       "title": "Preview Image"
-    }
-  },
-  "12": {
-    "inputs": {
-      "path": "/Users/janeveraert/Documents/CTRL + ALT/projects/JEF/server/_volumes/images/96778eec-d04a-45cf-a383-66a32848df7a/TEST.png",
-      "quality": 100,
-      "images": [
-        "44",
-        0
-      ]
-    },
-    "class_type": "ImageSaver",
-    "_meta": {
-      "title": "Image Save"
     }
   }
 }

@@ -1,5 +1,36 @@
 
 
+const rogueliteSettings = [
+  "Neon Cyber City", // A glowing, futuristic metropolis with flying cars and holographic billboards.
+  "Spooky Funfair", // A colorful carnival with haunted attractions, living toys, and mischievous ghosts.
+  "Crystal Coral Kingdom", // A dazzling underwater world with glowing sea creatures and ancient mermaid ruins.
+  "Enchanted Library Maze", // A vast, magical library where books create living stories and wandering wizards roam.
+  "Whimsical Casino", // A magical gambling house where luck is a game and playful spirits control the odds.
+  "Clockwork Toyland", // A world of giant wind-up toys, ticking gears, and friendly mechanical beings.
+  "Starship Playground", // A spaceship filled with bouncing zero-gravity rooms and quirky malfunctioning robots.
+  "Overgrown Ruinscape", // A peaceful post-apocalyptic world where nature has reclaimed lost cities.
+  "Sugar Kingdom", // A land of towering candy canes, jellybean roads, and mischievous chocolate monsters.
+  "Glowshroom Caverns", // A giant underground world full of glowing mushrooms and bioluminescent creatures.
+  "Infinite Sky Tower", // A floating castle that grows endlessly into the sky, filled with strange portals.
+  "Sky Island Archipelago", // A world of floating islands connected by ziplines and flying creatures.
+  "Rainbow Reef", // A vibrant deep-sea adventure with rainbow-colored fish and treasure-filled shipwrecks.
+  "Mystic Cowboy Town", // A magical Wild West where cowboy wizards ride spirit horses.
+  "Dreamland Nexus", // A pastel-colored realm shifting between fluffy dreamscapes and floating cloud castles.
+  "Frosty Wonderland", // A land of talking snowmen, enchanted ice palaces, and friendly winter spirits.
+  "Giant’s Garden", // A lush, oversized world where everyday objects tower like mountains.
+  "Jurassic Jungle", // A prehistoric land where friendly dinosaurs and ancient secrets wait to be discovered.
+  "Shadow Lantern Realm", // A mystical land of floating lanterns and light spirits playing in the darkness.
+  "Bazaar of Wonders", // A traveling market where everything—from flying carpets to pet dragons—is for sale.
+  "Storybook Kingdom", // A fairy tale world where enchanted forests, magical castles, and talking animals thrive.
+  "Lush Neon Jungle", // A vibrant forest where plants glow in neon hues and the trees hum with energy.
+  "Mystic Detective City", // A foggy city of magical detectives solving supernatural mysteries.
+  "Pixel Dreamscape", // A digital world where everything is made of pixels and glitches create new pathways.
+  "Time-Travel Battlefields", // A place where dinosaurs, knights, and robots collide in friendly time-mix battles.
+  "Puzzle Pyramid", // A giant golden pyramid full of shifting walls, ancient riddles, and treasure guardians.
+  "Friendly Alien Planet", // A bouncy, colorful world where adorable aliens and strange landscapes await.
+  "Toybox Kingdom", // A playful world where action figures, teddy bears, and dolls come to life.
+  "Floating Festival City", // A city built on floating airships, where a never-ending festival takes place.
+];
 
 export const script = (handle) => { 
 
@@ -10,18 +41,20 @@ export const script = (handle) => {
 	  	return { 
 		    method: "select", 
 		    translate: true,
+		    ask: true, 
 		    chat: {
 		      en: "In which time period does your game take place?",
 		      nl: "Welkom! je staat op het punt je eigen spel te maken. Via een aantal vragen zal ik proberen samen met jou een verhaal op te bouwen waarover het spel kan gaan. Hierna kan je je eigen spel spelen op de andere computer. We beginnen eraan met de eerste vraag; In welke tijdsperiode zou je graag willen dat je spel zich afspeelt?",
 		      fr: "Bienvenue! vous êtes sur le point de créer votre propre jeu. À travers un certain nombre de questions, je vais essayer de construire avec vous une histoire sur ce que peut être le jeu. Après cela, vous pouvez jouer à votre propre jeu sur l'autre ordinateur. Nous commencerons par la première question; À quelle période se déroule votre jeu ?",
 		    },
 		    visual: "A grid of 4x4 isometric elements for a  game set [[STEP_VALUE]]. \n the first row of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles. \n the elements bellow th first half are nature elements, and other small objects which can block the path of the player. \n white background \n make the artwork bright, colorful, and playful in an illustrative, comic book style.g",
-		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 combinations of creative and weird timeperiods and locations a computer game for children can take place in` 
+		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 combinations of creative and weird timeperiods and locations a computer game for children can take place in, pick from this list: ${rogueliteSettings.map((e) => e + ", ")}` 
 		  }
 	  	break;
 	  case "PROTAGONIST": 
 	  	return { 
 		    method: "generate", 
+		    ask: true,
 		    translate: false,
 		    chat: {
 		      en: "Who is your main character?",
@@ -29,12 +62,27 @@ export const script = (handle) => {
 		      fr: "Qui est votre personnage principal ?",
 		    },
 		    visual: null,
-		    prompt: prepend +"Give me 3 creative examples of a main character with a name, and a last name" 
+		    prompt: prepend +"Give me 3 creative examples of a main character. consider a name, and a last name, and a job" 
+		  }
+	  	break;
+	  case "PANEL": 
+	  	return { 
+		    method: "generate", 
+		    ask: false,
+		    translate: false,
+		    chat: {
+		      en: null,
+		      nl: null,
+		      fr: null,
+		    },
+		    visual: "Create a floating, isolated text panel designed for use in a game engine. The panel should have a bright, detailed, and colorful aesthetic, fitting the theme of [[CONTEXT]]. Use a comic book-style, illustrative, and cel-shaded look to add depth. \n\n Background & Integration: The panel should be isolated against a flat, evenly colored background, making it easy to integrate into a game engine.\n\n Text Area: Leave a clearly defined space in the center for displaying in-game text, ensuring readability while maintaining stylistic details around the borders.make the spacing to the borders big enough",
+		    prompt: null 
 		  }
 	  	break;
 	  case "PROTAGONIST_LOOK": 
 	  	return { 
 		    method: "generate", 
+		    ask: true,
 		    translate: false,
 		    chat: {
 		      en: "What does your main character look like?",
@@ -49,6 +97,7 @@ export const script = (handle) => {
 	  	return { 
 		    method: "generate", 
 		    translate: true,
+		    ask: true, 
 		    chat: {
 		      en: "What is the goal of your main character?",
 		      nl: "Wat is het doel van je hoofdpersonage?",
@@ -62,6 +111,7 @@ export const script = (handle) => {
 	  	return { 
 		    method: "generate", 
 		    translate: true,
+		    ask: true, 
 		    chat: {
 		      en: "Who is the villain of the story?",
 		      nl: "Wie is de slechterik van het verhaal?",
@@ -75,6 +125,7 @@ export const script = (handle) => {
 	  	return { 
 		    method: "generate", 
 		    translate: true,
+		    ask: true, 
 		    chat: {
 		      en: "How would you describe the villain?",
 		      nl: "Hoe zou je de slechterik beschrijven?",
@@ -87,7 +138,8 @@ export const script = (handle) => {
 	  case "HENCHMEN": 
 	  	return { 
 		    method: "generate",
-		    translate: true, 
+		    translate: true,
+		    ask: true,  
 		    chat: {
 		      en: "And who are the villain's henchmen?",
 		      nl: "En wie zijn de assistenten van de slechterik?",
@@ -101,6 +153,7 @@ export const script = (handle) => {
 	  	return { 
 		    method: "generate", 
 		    translate: true,
+		    ask: true, 
 		    chat: {
 		      en: "What can your main character use to defend themselves?",
 		      nl: "Waarmee kan je hoofdpersonage zich verdedigen?",
@@ -114,6 +167,7 @@ export const script = (handle) => {
 	  	return { 
 		    method: "generate", 
 		    translate: true,
+		    ask: true, 
 		    chat: {
 		      en: "How would you like to open your story, what text will your player see to draw them into the story?",
 		      nl: "Hoe wil je je verhaal graag openen, welke tekst krijgt je speler te zien om ze het verhaal in te trekken?",
@@ -126,6 +180,7 @@ export const script = (handle) => {
 	  case "NPC": 
 	  	return { 
 		    method: "generate", 
+		    ask: true,
 		    translate: false,
 		    chat: {
 		      en: "Perfect! Your world will be inhabited by others, we define a few to encounter in the game. What is the name of the  person we encounter?",
@@ -139,6 +194,7 @@ export const script = (handle) => {
 	  case "NPC_QUOTE": 
 	  	return { 
 		    method: "generate", 
+		    ask: true,
 		    translate: false,
 		    chat: {
 		      en: "What tip can this character give your protagonist to make the game more fun?",
@@ -153,6 +209,7 @@ export const script = (handle) => {
 	  case "END": 
 	  	return { 
 		    method: "generate", 
+		    ask: true,
 		    translate: false,
 		    chat: {
 		      en: "Ready! Take your cassette from the holder and go to the play booth to try out your game.",

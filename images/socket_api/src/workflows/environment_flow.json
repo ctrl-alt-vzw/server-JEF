@@ -1,8 +1,8 @@
 {
   "3": {
     "inputs": {
-      "seed": 785422573727638,
-      "steps": 8,
+      "seed": 774206364581300,
+      "steps": 11,
       "cfg": 1.4000000000000001,
       "sampler_name": "dpmpp_2m",
       "scheduler": "sgm_uniform",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "A grid of 4x4 isometric elements for a  game set prehistoric.\n\n\nthe first row of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles.\n\nthe elements bellow th first half are nature elements, and other small objects which can block the path of the player.\n\nwhite background\n\nmake the artwork bright, colorful, and playful in an illustrative, comic book style.",
+      "text": "A grid of 4x4 isometric elements for a  game set in candyland.\n\n\nthe first row of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles.\n\nthe elements bellow th first half are nature elements, and other small objects which can block the path of the player.\n\nwhite background\n\nmake the artwork bright, colorful, and playful in an illustrative, comic book style.",
       "clip": [
         "28",
         1
@@ -177,9 +177,9 @@
   },
   "26": {
     "inputs": {
-      "strength": 0.8,
+      "strength": 0.45,
       "start_percent": 0,
-      "end_percent": 0.3,
+      "end_percent": 0.5,
       "positive": [
         "27",
         0

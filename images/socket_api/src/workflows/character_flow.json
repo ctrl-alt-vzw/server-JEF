@@ -89,19 +89,6 @@
       "title": "Image Save"
     }
   },
-  "15": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "44",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
   "16": {
     "inputs": {
       "image": "bot_base (2).png",
@@ -236,26 +223,6 @@
     "class_type": "LoraLoader",
     "_meta": {
       "title": "Load LoRA"
-    }
-  },
-  "44": {
-    "inputs": {
-      "model": "RMBG-2.0",
-      "sensitivity": 0.55,
-      "process_res": 512,
-      "mask_blur": 0,
-      "mask_offset": 0,
-      "background": "Alpha",
-      "invert_output": false,
-      "optimize": "default",
-      "image": [
-        "22",
-        0
-      ]
-    },
-    "class_type": "RMBG",
-    "_meta": {
-      "title": "Remove Background (RMBG)"
     }
   },
   "45": {

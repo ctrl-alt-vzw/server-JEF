@@ -15,6 +15,7 @@ const pipeline = []
 const conversations = {}
 const STEPS = [
   "ENVIRONMENT",
+  "PANEL",
   "PROTAGONIST", 
   "PROTAGONIST_LOOK",
   "GOAL",
@@ -132,8 +133,21 @@ async function conversation_step(uuid) {
   const step_handle = STEPS[step_id];
   const selected_language = conversations[uuid].language;
   const context = build_context(uuid)
-  callback(`CHAT_QUESTION/${script(step_handle).chat[selected_language]}`)
-  execute_prompt(uuid, step_handle, context)
+
+  if(script(STEPS[step_id]).ask) {
+    callback(`CHAT_QUESTION/${script(step_handle).chat[selected_language]}`)
+    execute_prompt(uuid, step_handle, context)
+  } else {
+    const visual_prompt = script(STEPS[step_id]).visual;
+    execute_prompt_visual(visual_prompt, context, uuid, STEPS[step_id], "")
+    console.log(conversations[uuid].info,  STEPS[step_id] )
+    conversations[uuid].info[ STEPS[step_id] ].selected = null
+    conversations[uuid].info[ STEPS[step_id] ].generated = []
+
+    conversations[uuid].step += 1;
+    callback("SET_STEP/"+conversations[uuid].step)
+    conversation_step(uuid)
+  }
 }
 
 //send to client
@@ -201,8 +215,8 @@ async function execute_prompt(id, step_handle, context) {
 
 async function execute_prompt_visual(prompt, context, uuid, handle, style_ref) {
   const el = conversations[uuid].info[handle];
-  const ctx = conversations[uuid].info.ENVIRONMENT.generated[conversations[uuid].info.ENVIRONMENT.selected].text
-  const promptpiece = el["generated"][el["selected"]].text
+  const ctx = conversations[uuid].info.ENVIRONMENT.generated[ conversations[uuid].info.ENVIRONMENT.selected ].text
+  const promptpiece = el && el["generated"] && el["generated"][el["selected"]] ? el["generated"][el["selected"]].text : ""
   const tmp_prompt = prompt.replace("[[STEP_VALUE]]", promptpiece)
   const replacedPrompt = tmp_prompt.replace("[[CONTEXT]]", ctx)
   console.log("STYLE_REF: ", conversations[uuid].style_ref)
@@ -239,6 +253,7 @@ async function createNewGame(id) {
       current_options: [],
       info: {
         ENVIRONMENT: {},
+        PANEL: {},
         PROTAGONIST: {},
         PROTAGONIST_LOOK: {},
         GOAL: {},

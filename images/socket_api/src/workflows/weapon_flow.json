@@ -109,7 +109,7 @@
       "temporal_size": 64,
       "temporal_overlap": 8,
       "samples": [
-        "48",
+        "3",
         0
       ],
       "vae": [
@@ -238,7 +238,7 @@
       "title": "Preview Image"
     }
   },
-  "48": {
+  "3": {
     "inputs": {
       "seed": 571313418556123,
       "steps": 10,
@@ -266,6 +266,20 @@
     "class_type": "KSampler",
     "_meta": {
       "title": "KSampler"
+    }
+  },
+  "12": {
+    "inputs": {
+      "path": "/home/jan/Documents/server-JEF/_volumes/images/1ed17174-1f4b-46ed-8912-9dcc37d6f709_ENVIRONMENT.png",
+      "quality": 100,
+      "images": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "ImageSaver",
+    "_meta": {
+      "title": "Image Save"
     }
   }
 }
