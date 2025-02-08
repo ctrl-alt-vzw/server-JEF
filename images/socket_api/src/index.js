@@ -26,6 +26,7 @@ const STEPS = [
   "STORY_ELEMENTS",
   "NPC",
   "NPC_QUOTE",
+  "TITLE",
   "END"
 ];
 
@@ -280,6 +281,7 @@ async function createNewGame(id) {
         STORY_ELEMENTS: {},
         NPC: {},
         NPC_QUOTE: {},
+        TITLE: {},
         END: {}
       }
     }

@@ -206,6 +206,22 @@ export const script = (handle) => {
 		  }
 			break;
 
+	  case "TITLE": 
+	  	return { 
+		    method: "generate", 
+		    ask: true,
+		    translate: true,
+		    chat: {
+		      en: "What do you want to call your game?",
+		      nl: "Hoe wil je je spel noemen?",
+		      fr: "Comment veux-tu appeler ton jeu ?",
+		    },
+		    visual: null,
+		    prompt: prepend + "What might the name of the game be, give me 3 options?"  
+		  }
+			break;
+
+		}
 	  case "END": 
 	  	return { 
 		    method: "generate", 
