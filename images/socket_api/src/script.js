@@ -220,9 +220,7 @@ export const script = (handle) => {
 		    prompt: prepend + "What might the name of the game be, give me 3 options?"  
 		  }
 			break;
-
-		}
-	  case "END": 
+		case "END": 
 	  	return { 
 		    method: "generate", 
 		    ask: true,
