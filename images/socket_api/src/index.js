@@ -35,13 +35,22 @@ const app = express()
 app.get('/', function (req, res) {
   res.send('Hello World')
 })
-app.get('/:uuid', function (req, res) {
+app.get('/games', function (req, res) {
+  db.select("*").table("games").then((data) => {
+    res.send(data)
+  }).catch((e) => {
+    res.status(404).send()
+  })
+})
+app.get('/games/:uuid', function (req, res) {
   db.select("*").table("games").where({ UUID: req.params.uuid}).then((data) => {
     res.send(data)
   }).catch((e) => {
     res.status(404).send()
   })
 })
+
+
 
 app.listen(3001)
 
