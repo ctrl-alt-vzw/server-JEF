@@ -6,7 +6,7 @@ exports.up = function(knex) {
    return knex.schema.createTable('games', function (table) {
     table.increments('id').primary(); // Using UUID as the primary key
     table.uuid("UUID")
-    table.integer("cartridge_id");
+    table.string("cartridge_id");
 
     table.json('environment').nullable();
     table.json('protagonist').nullable();
