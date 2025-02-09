@@ -20,6 +20,8 @@ exports.up = function(knex) {
     table.json('npc').nullable();
     table.json('npc_quote').nullable();
     table.json('style').nullable();
+    table.json('title').nullable();
+    
     
     table.timestamps(true, true); // Adds created_at and updated_at columns
   });
