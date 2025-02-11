@@ -69,7 +69,7 @@
       "path": "/home/jan/Documents/server-JEF/_volumes/images/f9ceca76-22d5-41fd-b010-1ee1f23cecf2_NPC.png",
       "quality": 100,
       "images": [
-        "47",
+        "49",
         0
       ]
     },
@@ -165,7 +165,7 @@
   "45": {
     "inputs": {
       "images": [
-        "47",
+        "49",
         0
       ]
     },
@@ -199,6 +199,26 @@
     "class_type": "EmptySD3LatentImage",
     "_meta": {
       "title": "EmptySD3LatentImage"
+    }
+  },
+  "49": {
+    "inputs": {
+      "model": "RMBG-2.0",
+      "sensitivity": 0.55,
+      "process_res": 512,
+      "mask_blur": 0,
+      "mask_offset": 0,
+      "background": "Alpha",
+      "invert_output": false,
+      "optimize": "default",
+      "image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "RMBG",
+    "_meta": {
+      "title": "Remove Background (RMBG)"
     }
   }
 }
