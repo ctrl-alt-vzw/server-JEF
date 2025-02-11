@@ -36,7 +36,7 @@ services:
       OLLAMA_HOST: localhost
       FILESTORE_HOST: localhost
       TRANSLATE_HOST: localhost
-      FAST: false
+      FAST:
     ports:
       - 3000:3000
       - 3001:3001

@@ -32,7 +32,7 @@ const STEPS = [
 
 import express from 'express'
 const app = express()
-
+console.log(process.env.FAST)
 app.get('/', function (req, res) {
   res.send('Hello World')
 })

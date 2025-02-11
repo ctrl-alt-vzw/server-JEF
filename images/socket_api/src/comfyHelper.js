@@ -37,11 +37,12 @@ export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type
   flow["12"]["inputs"]["path"] = "/home/jan/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
 
-  if(process.env.FAST){
-    flow["4"]["inputs"]["ckpt_name"] = "SD1.5/v1-5-pruned-emaonly.ckpt"
-    flow["24"]["inputs"]["control_net_name"]="ControlNet-v1-1/control_v11p_sd15_canny.pth"
-  }
+  // if(process.env.FAST){
+  //   flow["4"]["inputs"]["ckpt_name"] = "SD1.5/v1-5-pruned-emaonly.ckpt"
+  //   flow["24"]["inputs"]["control_net_name"]="ControlNet-v1-1/control_v11p_sd15_canny.pth"
+  // }
 
+  
   const p = {"prompt": flow}
   const url = 'http://0.0.0.0:8188/prompt'; 
   fetch(url, {
