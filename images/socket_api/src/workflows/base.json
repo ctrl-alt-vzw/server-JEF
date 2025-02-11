@@ -2,7 +2,7 @@
   "3": {
     "inputs": {
       "seed": 199768630331746,
-      "steps": 2,
+      "steps": 3,
       "cfg": 1.4000000000000001,
       "sampler_name": "lcm",
       "scheduler": "simple",

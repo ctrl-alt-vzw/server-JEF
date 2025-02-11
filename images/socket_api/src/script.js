@@ -183,7 +183,7 @@ export const script = (handle) => {
 		    ask: true,
 		    translate: false,
 		    chat: {
-		      en: "Perfect! Your world will be inhabited by others, we define a few to encounter in the game. What is the name of the  person we encounter?",
+		      en: "Perfect! Your world will be inhabited by others, we define one to encounter in the game. What is the name of the  person we encounter?",
 		      nl: "Perfect! Je wereld zal bewoond worden door andere mensen. Doorheen je spel kunnen deze mensen je speler een tip geven om het spel te spelen. Wat is de naam van de persoon die we ontmoeten?",
 		      fr: "Parfait! Votre monde sera habité par d'autres, nous en définissons quelques-uns à rencontrer dans le jeu. Quel est le nom de la personne que nous rencontrons ?",
 		    },

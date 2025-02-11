@@ -2,7 +2,7 @@
   "3": {
     "inputs": {
       "seed": 530846592692507,
-      "steps": 2,
+      "steps": 3,
       "cfg": 2,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -208,8 +208,8 @@
   "28": {
     "inputs": {
       "lora_name": "Fluxartis 28.11A.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 1,
+      "strength_model": 0,
+      "strength_clip": 0,
       "model": [
         "4",
         0
