@@ -1,14 +1,14 @@
 {
   "3": {
     "inputs": {
-      "seed": 971121823259200,
-      "steps": 3,
-      "cfg": 2,
+      "seed": 948848583950225,
+      "steps": 4,
+      "cfg": 1.1,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
       "model": [
-        "28",
+        "4",
         0
       ],
       "positive": [
@@ -20,7 +20,7 @@
         1
       ],
       "latent_image": [
-        "5",
+        "47",
         0
       ]
     },
@@ -38,22 +38,11 @@
       "title": "Load Checkpoint"
     }
   },
-  "5": {
-    "inputs": {
-      "width": 512,
-      "height": 256,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
-  },
   "6": {
     "inputs": {
       "text": "Create a floating, isolated text panel designed for use in a game engine. The panel should have a bright, detailed, and colorful aesthetic, fitting the theme of candyland. Use a comic book-style, illustrative, and cel-shaded look to add depth.\n\n    Background & Integration: The panel should be isolated against a flat, evenly colored background, making it easy to integrate into a game engine.\n\n    Text Area: Leave a clearly defined space in the center for displaying in-game text, ensuring readability while maintaining stylistic details around the borders.make the spacing to the borders big enough",
       "clip": [
-        "28",
+        "4",
         1
       ]
     },
@@ -66,7 +55,7 @@
     "inputs": {
       "text": "text, watermark, pixel art",
       "clip": [
-        "28",
+        "4",
         1
       ]
     },
@@ -146,26 +135,6 @@
       "title": "Image Resize"
     }
   },
-  "22": {
-    "inputs": {
-      "tile_size": 512,
-      "overlap": 64,
-      "temporal_size": 64,
-      "temporal_overlap": 8,
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ]
-    },
-    "class_type": "VAEDecodeTiled",
-    "_meta": {
-      "title": "VAE Decode (Tiled)"
-    }
-  },
   "24": {
     "inputs": {
       "control_net_name": "FLUX.1/flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
@@ -181,7 +150,7 @@
       "start_percent": 0,
       "end_percent": 1,
       "positive": [
-        "27",
+        "6",
         0
       ],
       "negative": [
@@ -206,38 +175,6 @@
       "title": "Apply ControlNet"
     }
   },
-  "27": {
-    "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "FluxGuidance"
-    }
-  },
-  "28": {
-    "inputs": {
-      "lora_name": "Fluxartis 28.11A.safetensors",
-      "strength_model": 0,
-      "strength_clip": 0,
-      "model": [
-        "4",
-        0
-      ],
-      "clip": [
-        "4",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
   "44": {
     "inputs": {
       "model": "RMBG-2.0",
@@ -249,7 +186,7 @@
       "invert_output": false,
       "optimize": "default",
       "image": [
-        "22",
+        "48",
         0
       ]
     },
@@ -258,28 +195,31 @@
       "title": "Remove Background (RMBG)"
     }
   },
-  "45": {
+  "47": {
     "inputs": {
-      "images": [
-        "22",
-        0
-      ]
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
     },
-    "class_type": "PreviewImage",
+    "class_type": "EmptySD3LatentImage",
     "_meta": {
-      "title": "Preview Image"
+      "title": "EmptySD3LatentImage"
     }
   },
-  "46": {
+  "48": {
     "inputs": {
-      "images": [
-        "19",
+      "samples": [
+        "3",
         0
+      ],
+      "vae": [
+        "4",
+        2
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "Preview Image"
+      "title": "VAE Decode"
     }
   }
 }

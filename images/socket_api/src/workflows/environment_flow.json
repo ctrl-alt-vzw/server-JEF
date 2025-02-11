@@ -1,14 +1,14 @@
-{
+a{
   "3": {
     "inputs": {
-      "seed": 774206364581300,
-      "steps": 2,
-      "cfg": 2,
+      "seed": 704506044939948,
+      "steps": 4,
+      "cfg": 1.1,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
       "model": [
-        "28",
+        "4",
         0
       ],
       "positive": [
@@ -20,7 +20,7 @@
         1
       ],
       "latent_image": [
-        "5",
+        "47",
         0
       ]
     },
@@ -38,22 +38,11 @@
       "title": "Load Checkpoint"
     }
   },
-  "5": {
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
-  },
   "6": {
     "inputs": {
-      "text": "A grid of 4x4 isometric elements for a  game set in candyland.\n\n\nthe first row of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles.\n\nthe elements bellow th first half are nature elements, and other small objects which can block the path of the player.\n\nwhite background\n\nmake the artwork bright, colorful, and playful in an illustrative, comic book style.",
+      "text": "A grid of 4x4 isometric elements for a  game set in Time-Travel Battlefields. \n the first two rows of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles. \n the elements bellow th first half are environment elements, and other  objects which can block the path of the player. \n white background \n make the artwork bright, colorful, and playful in an illustrative, comic book style.",
       "clip": [
-        "28",
+        "4",
         1
       ]
     },
@@ -66,7 +55,7 @@
     "inputs": {
       "text": "text, watermark, pixel art",
       "clip": [
-        "28",
+        "4",
         1
       ]
     },
@@ -77,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/Users/janeveraert/Documents/CTRL + ALT/projects/JEF/server/_volumes/images/96778eec-d04a-45cf-a383-66a32848df7a/TEST.png",
+      "path": "/home/jan/Documents/server-JEF/_volumes/images/5d1d7210-3e32-4526-bd7c-f02a7054c6b4_ENVIRONMENT.png",
       "quality": 100,
       "images": [
         "44",
@@ -146,26 +135,6 @@
       "title": "Image Resize"
     }
   },
-  "22": {
-    "inputs": {
-      "tile_size": 512,
-      "overlap": 64,
-      "temporal_size": 64,
-      "temporal_overlap": 8,
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ]
-    },
-    "class_type": "VAEDecodeTiled",
-    "_meta": {
-      "title": "VAE Decode (Tiled)"
-    }
-  },
   "24": {
     "inputs": {
       "control_net_name": "FLUX.1/flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
@@ -179,9 +148,9 @@
     "inputs": {
       "strength": 0.45,
       "start_percent": 0,
-      "end_percent": 0.5,
+      "end_percent": 0.6,
       "positive": [
-        "27",
+        "6",
         0
       ],
       "negative": [
@@ -206,38 +175,6 @@
       "title": "Apply ControlNet"
     }
   },
-  "27": {
-    "inputs": {
-      "guidance": 3.6,
-      "conditioning": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "FluxGuidance"
-    }
-  },
-  "28": {
-    "inputs": {
-      "lora_name": "Fluxartis 28.11A.safetensors",
-      "strength_model": 0,
-      "strength_clip": 0,
-      "model": [
-        "4",
-        0
-      ],
-      "clip": [
-        "4",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
   "44": {
     "inputs": {
       "model": "RMBG-2.0",
@@ -249,7 +186,7 @@
       "invert_output": false,
       "optimize": "default",
       "image": [
-        "22",
+        "48",
         0
       ]
     },
@@ -258,28 +195,31 @@
       "title": "Remove Background (RMBG)"
     }
   },
-  "45": {
+  "47": {
     "inputs": {
-      "images": [
-        "22",
-        0
-      ]
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
     },
-    "class_type": "PreviewImage",
+    "class_type": "EmptySD3LatentImage",
     "_meta": {
-      "title": "Preview Image"
+      "title": "EmptySD3LatentImage"
     }
   },
-  "46": {
+  "48": {
     "inputs": {
-      "images": [
-        "19",
+      "samples": [
+        "3",
         0
+      ],
+      "vae": [
+        "4",
+        2
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "Preview Image"
+      "title": "VAE Decode"
     }
   }
 }
