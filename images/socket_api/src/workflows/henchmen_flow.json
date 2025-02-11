@@ -2,9 +2,9 @@
   "3": {
     "inputs": {
       "seed": 530846592692507,
-      "steps": 10,
-      "cfg": 1.1,
-      "sampler_name": "dpmpp_2m",
+      "steps": 1,
+      "cfg": 1,
+      "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1,
       "model": [

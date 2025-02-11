@@ -2,11 +2,11 @@
   "3": {
     "inputs": {
       "seed": 774206364581300,
-      "steps": 11,
-      "cfg": 1.4000000000000001,
-      "sampler_name": "dpmpp_2m",
+      "steps": 1,
+      "cfg": 1,
+      "sampler_name": "euler",
       "scheduler": "sgm_uniform",
-      "denoise": 0.9,
+      "denoise": 1,
       "model": [
         "28",
         0
@@ -31,7 +31,7 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "FLUX1/flux1-dev-fp8.safetensors"
+      "ckpt_name": "FLUX1/flux1-schnell-fp8.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
