@@ -5,7 +5,7 @@
       "steps": 2,
       "cfg": 1.4000000000000001,
       "sampler_name": "lcm",
-      "scheduler": "sgm_uniform",
+      "scheduler": "simple",
       "denoise": 1,
       "model": [
         "10",

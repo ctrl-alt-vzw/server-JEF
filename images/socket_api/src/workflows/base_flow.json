@@ -5,8 +5,8 @@
       "steps": 8,
       "cfg": 1.4000000000000001,
       "sampler_name": "dpmpp_2m",
-      "scheduler": "sgm_uniform",
-      "denoise": 0.9,
+      "scheduler": "simple",
+      "denoise": 1,
       "model": [
         "28",
         0
