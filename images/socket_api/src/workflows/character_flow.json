@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 34871300753881,
-      "steps": 4,
-      "cfg": 1.1,
+      "seed": 824086045099381,
+      "steps": 2,
+      "cfg": 1.2,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
@@ -69,7 +69,7 @@
       "path": "/home/jan/Documents/server-JEF/_volumes/images/f9ceca76-22d5-41fd-b010-1ee1f23cecf2_NPC.png",
       "quality": 100,
       "images": [
-        "49",
+        "50",
         0
       ]
     },
@@ -133,9 +133,9 @@
   },
   "26": {
     "inputs": {
-      "strength": 0.75,
+      "strength": 1,
       "start_percent": 0,
-      "end_percent": 0.5,
+      "end_percent": 0.6,
       "positive": [
         "6",
         0
@@ -165,7 +165,7 @@
   "45": {
     "inputs": {
       "images": [
-        "49",
+        "50",
         0
       ]
     },
@@ -201,24 +201,49 @@
       "title": "EmptySD3LatentImage"
     }
   },
-  "49": {
+  "50": {
     "inputs": {
-      "model": "RMBG-2.0",
-      "sensitivity": 0.55,
-      "process_res": 512,
-      "mask_blur": 0,
-      "mask_offset": 0,
-      "background": "Alpha",
-      "invert_output": false,
-      "optimize": "default",
-      "image": [
+      "transparency": true,
+      "model": "isnet-general-use",
+      "post_processing": false,
+      "only_mask": false,
+      "alpha_matting": false,
+      "alpha_matting_foreground_threshold": 200,
+      "alpha_matting_background_threshold": 8,
+      "alpha_matting_erode_size": 8,
+      "background_color": "none",
+      "images": [
         "47",
         0
       ]
     },
-    "class_type": "RMBG",
+    "class_type": "Image Rembg (Remove Background)",
     "_meta": {
-      "title": "Remove Background (RMBG)"
+      "title": "Image Rembg (Remove Background)"
+    }
+  },
+  "51": {
+    "inputs": {
+      "images": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "52": {
+    "inputs": {
+      "images": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
     }
   }
 }

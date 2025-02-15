@@ -15,7 +15,6 @@ const pipeline = []
 const conversations = {}
 const STEPS = [
   "ENVIRONMENT",
-  "PANEL",
   "PROTAGONIST", 
   "PROTAGONIST_LOOK",
   "GOAL",
@@ -270,7 +269,6 @@ async function createNewGame(id) {
       current_options: [],
       info: {
         ENVIRONMENT: {},
-        PANEL: {},
         PROTAGONIST: {},
         PROTAGONIST_LOOK: {},
         GOAL: {},
