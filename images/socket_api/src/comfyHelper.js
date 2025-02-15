@@ -35,7 +35,7 @@ export const queue_prompt = (prompt_in, uuid, type, style_ref) => {
   flow["6"]["inputs"]["text"] = prompt_in
   flow["3"]["inputs"]["seed"] = Math.random() * 10000
   // flow["9"]["inputs"]["filename_prefix"] = uuid+"/"+type
-  flow["12"]["inputs"]["path"] = "/home/jan/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
+  flow["12"]["inputs"]["path"] = "/home/ai-game-server/Documents/server-JEF/_volumes/images/" + uuid +"_"+type+".png"
 
   // if(process.env.FAST){
   //   flow["4"]["inputs"]["ckpt_name"] = "SD1.5/v1-5-pruned-emaonly.ckpt"
