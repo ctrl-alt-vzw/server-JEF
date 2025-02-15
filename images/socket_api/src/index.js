@@ -202,7 +202,7 @@ async function execute_prompt(id, step_handle, context) {
     })
       .then(r => r.json())
       .then(d => {
-
+        console.log(d)
         const response = d.response;
         translate(response, conversations[id].language, (translated_response) => {
           try {
