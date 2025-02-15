@@ -299,9 +299,12 @@ wss.on('connection', function connection(_ws) {
 });
 async function initialise() {
   console.log("connect")
-  fetch(`http://${process.env.OLLAMA_HOST}:11434/api/pull`, { method: "POST", body: JSON.stringify({ model: "llama3.2"})})
-  fetch(`http://${process.env.OLLAMA_HOST}:11434/api/pull`, { method: "POST", body: JSON.stringify({ model: "tinyllama"})})
-  
+  try {
+    fetch(`http://${process.env.OLLAMA_HOST}:11434/api/pull`, { method: "POST", body: JSON.stringify({ model: "llama3.2"})})
+    fetch(`http://${process.env.OLLAMA_HOST}:11434/api/pull`, { method: "POST", body: JSON.stringify({ model: "tinyllama"})})
+  } catch(e) {
+    console.log(e)
+  }
   timer = setInterval(() => {
     let toRemove = -1;
     pipeline.forEach((e, i) => {

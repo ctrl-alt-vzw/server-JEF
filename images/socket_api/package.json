@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "npx knex migrate:latest --cwd ./src/db --knexfile ./knexfile.cjs && nodemon src/index.js",
+    "dev": "npx knex migrate:latest --cwd ./src/db --knexfile ./knexfile.cjs && node src/index.js",
     "start": "npx knex migrate:latest --cwd ./src/db --knexfile ./knexfile.cjs &&  node src/index.js"
   },
   "type": "module",
