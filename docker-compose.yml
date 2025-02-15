@@ -107,9 +107,6 @@ services:
               capabilities: [gpu]
 
 networks:
-  mqtt:
-    driver: bridge
-
   local:
     driver: bridge
     
