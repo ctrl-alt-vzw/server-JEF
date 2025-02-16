@@ -88,7 +88,7 @@ services:
     image: libretranslate/libretranslate:latest
     container_name: libretranslate
     hostname: libretranslate
-    restart: "yes"
+    restart: "always"
     ports:
       - 7500:5000
     environment:
