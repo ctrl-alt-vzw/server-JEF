@@ -88,16 +88,16 @@ services:
     image: libretranslate/libretranslate:latest
     container_name: libretranslate
     hostname: libretranslate
-    restart: "no"
+    restart: "yes"
     ports:
       - 7500:5000
     environment:
-      LT_DEBUG: true
-      LT_FRONTEND_LANGUAGE_SOURCE: de
+      LT_DEBUG: false
+      LT_FRONTEND_LANGUAGE_SOURCE: fr
       LT_FRONTEND_LANGUAGE_TARGET: en
       LT_LOAD_ONLY: 'nl,fr,en'
-      LT_THREADS: 4
-      LT_SUGGESTIONS: true  
+      LT_THREADS: 2
+      LT_SUGGESTIONS: false  
     deploy:
       resources:
         reservations:
