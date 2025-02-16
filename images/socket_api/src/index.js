@@ -119,7 +119,7 @@ async function translate(text, lang, cb) {
     headers: { "Content-Type": "application/json" },
   }).then((r) => r.json() )
   .then((d) => {
-    console.log(d, text, lang);
+    // console.log(d, text, lang);
     cb(d.translatedText)
   })
 }
@@ -157,7 +157,7 @@ async function conversation_step(uuid) {
   } else {
     const visual_prompt = script(STEPS[step_id]).visual;
     execute_prompt_visual(visual_prompt, context, uuid, STEPS[step_id], "")
-    console.log(conversations[uuid].info,  STEPS[step_id] )
+    // console.log(conversations[uuid].info,  STEPS[step_id] )
     conversations[uuid].info[ STEPS[step_id] ].selected = null
     conversations[uuid].info[ STEPS[step_id] ].generated = []
 
@@ -185,7 +185,7 @@ function build_context(uuid) {
       str += str.length > 0 ? ", " + full : full;
     }
   }
-  console.log(str)
+  // console.log(str)
   return str;
 }
 
@@ -206,7 +206,7 @@ async function execute_prompt(id, step_handle, context) {
         const response = d.response;
         translate(response, conversations[id].language, (translated_response) => {
           try {
-            console.log(translated_response)
+            // console.log(translated_response)
             const split_response = translated_response.split(/[\t|\n]+/g).filter(e=> e.length > 0).map((e) => cleanup_response(e))
             if(split_response.length > 2) {
               const originalResponse = response.split(/[\t|\n]+/g).filter(e=> e.length > 0).map((e) => cleanup_response(e))
@@ -217,7 +217,7 @@ async function execute_prompt(id, step_handle, context) {
                   en: originalResponse.length > 2 ? originalResponse[i] : null
                 }
               })
-              console.log(enriched)
+              // console.log(enriched)
               conversations[id].info[step_handle]["generated"] = enriched
               callback(`GENERATED_OPTIONS/${JSON.stringify(enriched)}`)
             } else {
