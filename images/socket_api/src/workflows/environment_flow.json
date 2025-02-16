@@ -1,10 +1,10 @@
 {
   "3": {
     "inputs": {
-      "seed": 587088433512797,
+      "seed": 283128998055735,
       "steps": 2,
-      "cfg": 1.2,
-      "sampler_name": "dpmpp_2m",
+      "cfg": 1.7,
+      "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
       "model": [
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "A grid of 4x4 isometric elements for a  game set in Time-Travel Battlefields. \n the first two rows of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles. \n the elements bellow th first half are environment elements, and other  objects which can block the path of the player. \n white background \n make the artwork bright, colorful, and playful in an illustrative, comic book style.",
+      "text": "A grid of 4x4 isometric elements for a  game set in Starship playground. \n the first two rows of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles. \n the elements bellow th first half are environment elements, and other  objects which can block the path of the player. \n white background \n make the artwork bright, colorful, and playful in an illustrative, comic book style.",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/jan/Documents/server-JEF/_volumes/images/5d1d7210-3e32-4526-bd7c-f02a7054c6b4_ENVIRONMENT.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/9b83c06a-7723-44de-8e63-09d4a825cc05_ENVIRONMENT.png",
       "quality": 100,
       "images": [
         "50",
@@ -148,7 +148,7 @@
     "inputs": {
       "strength": 1,
       "start_percent": 0,
-      "end_percent": 0.8,
+      "end_percent": 0.9,
       "positive": [
         "6",
         0

@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 824086045099381,
+      "seed": 1121010158784825,
       "steps": 2,
-      "cfg": 1.2,
+      "cfg": 1.4000000000000001,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "2Design an isolated isometric game asset pack for a NPC, Infinite Sky Tower character named Zarek \"Zee\" Patel, Tower Security Officer. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+      "text": "2Design an isolated isometric game asset pack for a NPC, Sterrenschip Speeltuin character named Cacofonix, Schepsel dat zich voeden met disharmonische freaks. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right, no arms or legs only torso and head. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/jan/Documents/server-JEF/_volumes/images/f9ceca76-22d5-41fd-b010-1ee1f23cecf2_NPC.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/8f8b986e-ccea-45ab-a9c2-d4a86fee979e_NPC.png",
       "quality": 100,
       "images": [
         "50",
@@ -209,8 +209,8 @@
       "only_mask": false,
       "alpha_matting": false,
       "alpha_matting_foreground_threshold": 200,
-      "alpha_matting_background_threshold": 8,
-      "alpha_matting_erode_size": 8,
+      "alpha_matting_background_threshold": 10,
+      "alpha_matting_erode_size": 11,
       "background_color": "none",
       "images": [
         "47",

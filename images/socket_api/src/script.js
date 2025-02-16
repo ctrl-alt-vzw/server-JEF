@@ -48,7 +48,7 @@ export const script = (handle) => {
 		      fr: "C'est parti ! Où se déroule ton jeu ?",
 		    },
 		    visual: "A grid of 4x4 isometric elements for a  game set in [[STEP_VALUE]]. \n the first two rows of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles. \n the elements bellow th first half are environment elements, and other  objects which can block the path of the player. \n white background \n make the artwork bright, colorful, and playful in an illustrative",
-		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 combinations of creative and weird timeperiods and locations a computer game for children can take place in, pick from this list: ${rogueliteSettings.map((e) => e + ", ")}, you can mix them up` 
+		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 combinations of creative and weird timeperiods and locations for a computer game for children, pick from this list: ${rogueliteSettings.map((e) => e + ", ")}` 
 		  }
 	  	break;
 	  case "PROTAGONIST": 
