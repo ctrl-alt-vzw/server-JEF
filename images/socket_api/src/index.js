@@ -129,7 +129,7 @@ async function handle_selection(uuid, step_id, selected) {
 
   const field = STEPS[step_id].toLowerCase();
   const option = conversations[uuid].info[STEPS[step_id]]["generated"][selected]
-  
+
   db.table("games").update(field, JSON.stringify({ ...option, full: conversations[uuid].info[STEPS[step_id]]["generated"]})).where({UUID: uuid}).returning("*").then((d) => {
     const visual_prompt = script(STEPS[step_id]).visual;
         
@@ -215,7 +215,7 @@ async function execute_prompt(id, step_handle, context) {
                 return {
                   text: e,
                   option: i,
-                  en: originalResponse.length > 2 ? originalResponse[i]
+                  en: originalResponse.length > 2 ? originalResponse[i] : null
                 }
               })
               console.log(enriched)
