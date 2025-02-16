@@ -209,13 +209,15 @@ async function execute_prompt(id, step_handle, context) {
             console.log(translated_response)
             const split_response = translated_response.split(/[\t|\n]+/g).filter(e=> e.length > 0).map((e) => cleanup_response(e))
             if(split_response.length > 2) {
-
+              const originalResponse = response.split(/[\t|\n]+/g).filter(e=> e.length > 0).map((e) => cleanup_response(e))
               const enriched = split_response.slice(0, 3).map((e, i) => {
                 return {
                   text: e,
                   option: i
+                  original: originalResponse.length > 2 ? originalResponse[i]
                 }
               })
+              console.log(enriched)
               conversations[id].info[step_handle]["generated"] = enriched
               callback(`GENERATED_OPTIONS/${JSON.stringify(enriched)}`)
             } else {
