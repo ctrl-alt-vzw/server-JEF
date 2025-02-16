@@ -180,7 +180,7 @@ function build_context(uuid) {
     const c = items[Object.keys(items)[i]];
     if(c.generated && STEPS[i].toLowerCase().indexOf("_look") == -1 && c.selected) {
       console.log(c.generated[c.selected])
-      const field = c.generated[c.selected].text;
+      const field = c.generated[c.selected].en;
       const full = STEPS[i].toLowerCase() + ": " + field
       str += str.length > 0 ? ", " + full : full;
     }
@@ -203,7 +203,6 @@ async function execute_prompt(id, step_handle, context) {
     })
       .then(r => r.json())
       .then(d => {
-        console.log(d)
         const response = d.response;
         translate(response, conversations[id].language, (translated_response) => {
           try {
@@ -235,8 +234,8 @@ async function execute_prompt(id, step_handle, context) {
 
 async function execute_prompt_visual(prompt, context, uuid, handle, style_ref) {
   const el = conversations[uuid].info[handle];
-  const ctx = conversations[uuid].info.ENVIRONMENT.generated[ conversations[uuid].info.ENVIRONMENT.selected ].text
-  const promptpiece = el && el["generated"] && el["generated"][el["selected"]] ? el["generated"][el["selected"]].text : ""
+  const ctx = conversations[uuid].info.ENVIRONMENT.generated[ conversations[uuid].info.ENVIRONMENT.selected ].en
+  const promptpiece = el && el["generated"] && el["generated"][el["selected"]] ? el["generated"][el["selected"]].en : ""
   const tmp_prompt = prompt.replace("[[STEP_VALUE]]", promptpiece)
   const replacedPrompt = tmp_prompt.replace("[[CONTEXT]]", ctx)
   console.log("STYLE_REF: ", conversations[uuid].style_ref)
