@@ -37,6 +37,9 @@ console.log(process.env.FAST)
 app.get('/', function (req, res) {
   res.send('Hello World')
 })
+
+app.use('/monitor', express.static('static_frontend'))
+
 app.get('/games', function (req, res) {
   db.select("*").table("games").then((data) => {
     res.send(data)

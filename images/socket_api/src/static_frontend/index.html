@@ -47,8 +47,6 @@
 				}
 
 				function handleLog(event) {
-
-					console.log(event)
 					const logELement = `
 						<div class="log_el"><h3>${event.data}</h3></div>
 					`
@@ -63,6 +61,7 @@
 						if(data.type == "knodes") {
 								if (data.data.images && data.data.images.length > 0) {
 										const imageElement = document.createElement("img");
+										imageElement.width = 200
 										imageElement.src = `data:image/png;base64,${data.data.images[0]}`;
 										document.getElementById("image_queue").insertAdjacentElement("afterbegin", imageElement);
 										check_length();
@@ -73,7 +72,7 @@
 
 				function check_length() {
 						const imageQueue = document.getElementById('image_queue');
-						if (imageQueue.children.length > 2) {
+						if (imageQueue.children.length > 10) {
 								imageQueue.removeChild(imageQueue.lastChild);
 						}
 				}
@@ -81,9 +80,14 @@
 				window.onload = connectWebSocket;
 		</script>
 		<style>
-				body { font-family: Arial, sans-serif; padding: 20px; }
-				.container {
+				body { 
+					font-family: Arial, sans-serif; 
 					overflow: hidden;
+					padding: 20px; 
+					height: 100vh;
+					width: 100vw;
+				}
+				.container {
 					width: 100%;
 					display: flex;
 					justify-content: space-between;
