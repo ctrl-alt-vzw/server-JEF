@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 624967996319061,
+      "seed": 97772238487259,
       "steps": 3,
       "cfg": 1.5,
       "sampler_name": "euler",
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "A 4x4 grid of isometric game tiles for an Lucky Lollipop Casino (Las Vegas) - Wild West. The top two rows (8 tiles) feature only empty floor tiles with subtle variations in texture, color, or minor decorative details for variety, but without any objects. The bottom two rows (8 tiles) contain environment elements and obstacles that block the player’s path. The artwork is bright, colorful, and playful, with a fantasy theme. The background is black",
+      "text": "A 4x4 grid of isometric game tiles for an Lucky Lollipop Casino. The top two rows (8 tiles) feature only empty floor tiles with subtle variations in texture, color, or minor decorative details for variety, but without any objects. The bottom two rows (8 tiles) contain environment elements and obstacles that block the player’s path. The artwork is bright, colorful, and playful, with a fantasy theme. The background is black",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/jan/Documents/server-JEF/_volumes/images/33861f73-2104-4685-bead-d493cd293125_ENVIRONMENT.png",
+      "path": "/home/jan/Documents/server-JEF/_volumes/images/11ac5cdc-51ef-4ee8-bd63-e4d3161bfbf7_ENVIRONMENT.png",
       "quality": 100,
       "images": [
         "50",
@@ -193,10 +193,10 @@
     "inputs": {
       "transparency": true,
       "model": "isnet-general-use",
-      "post_processing": true,
+      "post_processing": false,
       "only_mask": false,
       "alpha_matting": true,
-      "alpha_matting_foreground_threshold": 250,
+      "alpha_matting_foreground_threshold": 140,
       "alpha_matting_background_threshold": 9,
       "alpha_matting_erode_size": 9,
       "background_color": "black",
