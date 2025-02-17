@@ -48,6 +48,8 @@ services:
     depends_on:
       store:
         condition: service_healthy
+      libretranslate:
+        condition: service_healthy
     volumes:
       - ./images/socket_api/src:/usr/app/src
     network_mode: host
@@ -107,6 +109,8 @@ services:
             - driver: nvidia
               count: 1
               capabilities: [gpu]
+    healthcheck:
+      test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
 
 networks:
   local:
