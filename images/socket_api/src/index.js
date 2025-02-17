@@ -48,7 +48,7 @@ app.get('/games', function (req, res) {
   })
 })
 app.get('/games_by_cartridge/:cartridge_id', function (req, res) {
-  db.select("*").table("games").where({ cartridge_id: req.params.cartridge_id}).limit(5).orderBy("id", "DESC").then((data) => {
+  db.select("*").table("games").where({ cartridge_id: req.params.cartridge_id}).limit(4).orderBy("id", "DESC").then((data) => {
     res.send(data)
   }).catch((e) => {
     res.status(404).send()
