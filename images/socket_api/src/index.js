@@ -1,5 +1,4 @@
 import knex  from 'knex';
-import path from 'path'
 import { WebSocketServer } from 'ws';
 import knexfile  from './db/knexfile.cjs';
 import {generateUUID} from './helpers.js'
@@ -62,7 +61,7 @@ app.get('/games/:uuid', function (req, res) {
   })
 })
 
-app.use('/monitor', express.static(path.join(__dirname, 'static_frontend')))
+app.use('/monitor', express.static('./static_frontend'))
 
 
 app.listen(3001)
