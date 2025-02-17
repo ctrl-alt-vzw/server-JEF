@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 230868627684354,
+      "seed": 2659,
       "steps": 3,
-      "cfg": 1.4,
+      "cfg": 1.4000000000000001,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset of an angry, floating, underwater coral warrior.\n\nThe warrior should be a sentient, armored coral creature, resembling an ancient guardian of the deep. Its body should be made of twisting coral, seaweed, and bioluminescent barnacles, giving it an organic yet formidable appearance. It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance.\n\nIt should be floating in the water with no ground below it, with strands of seaweed and tiny bubbles drifting around to enhance the underwater effect.\n\nThe style should be bright, colorful, and playful, suited for a 9-year-old, with a comic book-style, illustrative, and cel-shaded aesthetic to add depth and character.\n\nit should be looking to the left\n\nEnsure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+      "text": "Design an isolated isometric game asset of an angry, floating, Cursed Tomes - Deadly, sentient books bound with magical chains. \n The warrior should be a sentient creature from Enchanted Library MazeIt should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a comic book-style, illustrative, and cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/Users/janeveraert/Documents/CTRL + ALT/projects/JEF/server/_volumes/images/96778eec-d04a-45cf-a383-66a32848df7a/TEST.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/567acf05-ed04-4f0e-8a38-a5f7d7e61ab8_HENCHMEN.png",
       "quality": 100,
       "images": [
         "52",
@@ -233,6 +233,19 @@
     "class_type": "Image Rembg (Remove Background)",
     "_meta": {
       "title": "Image Rembg (Remove Background)"
+    }
+  },
+  "53": {
+    "inputs": {
+      "Actions": "",
+      "images": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "ImageOutput",
+    "_meta": {
+      "title": "Image(s) To Websocket (Base64)"
     }
   }
 }

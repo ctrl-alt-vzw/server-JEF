@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 505222860239451,
+      "seed": 6446,
       "steps": 2,
       "cfg": 1.4000000000000001,
       "sampler_name": "euler",
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "A grid of 4x4 isometric elements for a  game set in Clockwork Toyland - Jurassic Jungle. \n the first two rows of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles. \n the elements bellow th first half are environment elements, and other  objects which can block the path of the player. \n white background \nleave the space between the tiles blank and empty\n make the artwork bright, colorful, and playful in an illustrative",
+      "text": "A grid of 4x4 isometric elements for a  game set in Enchanted Library Maze. \n the first two rows of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles. \n the elements bellow th first half are environment elements, and other  objects which can block the path of the player. \n white background \n make the artwork bright, colorful, and playful in an illustrative",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/fda51c89-1274-4bd3-b945-b6a5bf7fcd78_ENVIRONMENT.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/567acf05-ed04-4f0e-8a38-a5f7d7e61ab8_ENVIRONMENT.png",
       "quality": 100,
       "images": [
         "50",
@@ -76,19 +76,6 @@
     "class_type": "ImageSaver",
     "_meta": {
       "title": "Image Save"
-    }
-  },
-  "15": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "50",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
     }
   },
   "16": {
@@ -246,6 +233,19 @@
     "class_type": "FluxGuidance",
     "_meta": {
       "title": "FluxGuidance"
+    }
+  },
+  "55": {
+    "inputs": {
+      "Actions": "",
+      "images": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "ImageOutput",
+    "_meta": {
+      "title": "Image(s) To Websocket (Base64)"
     }
   }
 }

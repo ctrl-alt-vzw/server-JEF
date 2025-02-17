@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1112360630988001,
+      "seed": 9335,
       "steps": 2,
       "cfg": 1.3,
       "sampler_name": "dpmpp_2m",
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset of a whimsical, prehistoric-themed weapon set, arranged from top to bottom in a left-to-right perspective.\n\n    A handgun (top): A slingshot-style bone pistol or a miniature rock-launching crossbow, crafted from carved wood, sinew, and sharpened stone. The grip could be wrapped in animal hide, and the trigger might resemble a tiny carved mammoth tusk. A glowing chunk of amber or a crackling piece of firestone could serve as its magical energy source. A small flaming rock or magical ember should be bursting from the weapon.\n\n    A melee weapon (bottom): A massive stone club or a bone-handled war axe, enchanted with glowing cave-painting patterns. The head could be made of obsidian, flint, or a giant fossilized tooth, shimmering with ancient magic. The handle might be wrapped in vines, animal fur, or sinew for grip.\n\nAll weapons should be floating in an empty, evenly colored background, making them easy to integrate into a game engine.\n\nThe artwork should be bright, detailed, and colorful, with a comic book-style, illustrative, and cel-shaded aesthetic that adds depth while maintaining a playful, prehistoric fantasy feel.\n\nEnsure the artwork is presented in an isometric perspective, isolated from any distracting background elements.",
+      "text": " \n Design an isolated isometric game asset of a themed weapon set, from Enchanted Library Maze, arranged from top to bottom in a left-to-right perspective. \n A handgun (top) and A melee weapon (bottom), being Librarian's Quill-Sharpener as a projectile  \n All weapons should be floating in an empty, evenly colored background, making them easy to integrate into a game engine. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative, and cel-shaded aesthetic that adds depth . \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/jan/Documents/server-JEF/_volumes/images/1ed17174-1f4b-46ed-8912-9dcc37d6f709_ENVIRONMENT.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/567acf05-ed04-4f0e-8a38-a5f7d7e61ab8_WEAPON.png",
       "quality": 100,
       "images": [
         "49",
@@ -76,19 +76,6 @@
     "class_type": "ImageSaver",
     "_meta": {
       "title": "Image Save"
-    }
-  },
-  "15": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "49",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
     }
   },
   "16": {
@@ -233,6 +220,19 @@
     "class_type": "PreviewImage",
     "_meta": {
       "title": "Preview Image"
+    }
+  },
+  "51": {
+    "inputs": {
+      "Actions": "",
+      "images": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "ImageOutput",
+    "_meta": {
+      "title": "Image(s) To Websocket (Base64)"
     }
   }
 }
