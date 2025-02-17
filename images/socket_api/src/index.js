@@ -309,7 +309,7 @@ wss.on('connection', function connection(_ws) {
 log_wss.on('connection', function connection(_ws) {
   console.log("connection for log")
   log_ws = _ws;
-  ws.on('error', console.error);
+  log_ws.on('error', console.error);
 });
 async function initialise() {
   console.log("connect")
