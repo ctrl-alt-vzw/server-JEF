@@ -10,39 +10,41 @@
 
 				function connectWebSocket() {
 						socket = new WebSocket('ws://192.168.0.148:8188/ws');
-						socket_api = new WebSocket('ws://192.168.0.148:3002/ws');
 
 						socket.onopen = function() {
 								console.log("WebSocket 1 connected");
 								document.getElementById("connect-status").innerText = "Websocket 1 status: connected";
 						};
+						socket.onmessage = handleMessage;
+
+						socket.onerror = function(error) {
+								console.error("WebSocket 1 error:", error);
+								document.getElementById("connect-status").innerText = "Websocket 1 status: disconnected";
+						};
+						socket.onclose = function() {
+								console.log("WebSocket 1 disconnected, retrying in 5 seconds...");
+								setTimeout(connectWebSocket, 5000);
+						};
+				}
+
+
+				function connectWebSocketLog() {
+						socket_api = new WebSocket('ws://192.168.0.148:3002/ws');
 
 						socket_api.onopen = function() {
 								console.log("WebSocket 2 connected");
 								document.getElementById("connect-status-2").innerText = "Websocket 2 status: connected";
 						};
 
-						socket.onmessage = handleMessage;
 						socket_api.onmessage = handleLog;
-
-						socket.onerror = function(error) {
-								console.error("WebSocket 1 error:", error);
-								document.getElementById("connect-status").innerText = "Websocket 1 status: disconnected";
-						};
-
 						socket_api.onerror = function(error) {
 								console.error("WebSocket 2 error:", error);
 								document.getElementById("connect-status-2").innerText = "Websocket 2 status: disconnected";
 						};
 
-						socket.onclose = function() {
-								console.log("WebSocket 1 disconnected, retrying in 5 seconds...");
-								setTimeout(connectWebSocket, 5000);
-						};
-
 						socket_api.onclose = function() {
 								console.log("WebSocket 2 disconnected, retrying in 5 seconds...");
-								setTimeout(connectWebSocket, 5000);
+								setTimeout(connectWebSocketLog, 5000);
 						};
 				}
 
