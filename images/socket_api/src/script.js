@@ -1,35 +1,55 @@
 
 
 const rogueliteSettings = [
-  "Neon Cyber City", // A glowing, futuristic metropolis with flying cars and holographic billboards.
-  "Spooky Funfair", // A colorful carnival with haunted attractions, living toys, and mischievous ghosts.
-  "Crystal Coral Kingdom", // A dazzling underwater world with glowing sea creatures and ancient mermaid ruins.
-  "Enchanted Library Maze", // A vast, magical library where books create living stories and wandering wizards roam.
-  "Whimsical Casino", // A magical gambling house where luck is a game and playful spirits control the odds.
-  "Clockwork Toyland", // A world of giant wind-up toys, ticking gears, and friendly mechanical beings.
-  "Starship Playground", // A spaceship filled with bouncing zero-gravity rooms and quirky malfunctioning robots.
-  "Overgrown Ruinscape", // A peaceful post-apocalyptic world where nature has reclaimed lost cities.
-  "Sugar Kingdom", // A land of towering candy canes, jellybean roads, and mischievous chocolate monsters.
-  "Glowshroom Caverns", // A giant underground world full of glowing mushrooms and bioluminescent creatures.
-  "Infinite Sky Tower", // A floating castle that grows endlessly into the sky, filled with strange portals.
-  "Sky Island Archipelago", // A world of floating islands connected by ziplines and flying creatures.
-  "Rainbow Reef", // A vibrant deep-sea adventure with rainbow-colored fish and treasure-filled shipwrecks.
-  "Mystic Cowboy Town", // A magical Wild West where cowboy wizards ride spirit horses.
-  "Dreamland Nexus", // A pastel-colored realm shifting between fluffy dreamscapes and floating cloud castles.
-  "Frosty Wonderland", // A land of talking snowmen, enchanted ice palaces, and friendly winter spirits.
-  "Giant’s Garden", // A lush, oversized world where everyday objects tower like mountains.
-  "Jurassic Jungle", // A prehistoric land where friendly dinosaurs and ancient secrets wait to be discovered.
-  "Shadow Lantern Realm", // A mystical land of floating lanterns and light spirits playing in the darkness.
-  "Bazaar of Wonders", // A traveling market where everything—from flying carpets to pet dragons—is for sale.
-  "Storybook Kingdom", // A fairy tale world where enchanted forests, magical castles, and talking animals thrive.
-  "Lush Neon Jungle", // A vibrant forest where plants glow in neon hues and the trees hum with energy.
-  "Mystic Detective City", // A foggy city of magical detectives solving supernatural mysteries.
-  "Pixel Dreamscape", // A digital world where everything is made of pixels and glitches create new pathways.
-  "Time-Travel Battlefields", // A place where dinosaurs, knights, and robots collide in friendly time-mix battles.
-  "Puzzle Pyramid", // A giant golden pyramid full of shifting walls, ancient riddles, and treasure guardians.
-  "Friendly Alien Planet", // A bouncy, colorful world where adorable aliens and strange landscapes await.
-  "Toybox Kingdom", // A playful world where action figures, teddy bears, and dolls come to life.
-  "Floating Festival City", // A city built on floating airships, where a never-ending festival takes place.
+	"Neon Jellybean City",
+	"Spooky Silly Funfair",
+	"Bubblegum Coral Kingdom",
+	"Enchanted Storybook Library",
+	"Lucky Lollipop Casino",
+	"Ticking Toyland",
+	"Star Bounce Playground",
+	"Overgrown Jungle Gym",
+	"Giggly Gummy Kingdom",
+	"Glowshroom Fairy Caverns",
+	"Never-Ending Sky Tower",
+	"Cloud Hop Islands",
+	"Rainbow Bubble Reef",
+	"Cowboy Unicorn Ranch",
+	"Dreamy Cotton Candy World",
+	"Frosty Marshmallow Wonderland",
+	"Giant’s Backyard Playground",
+	"Dino Parade Jungle",
+	"Wishing Lantern Valley",
+	"Whirlwind Wonder Bazaar",
+	"Talking Animal Kingdom",
+	"Glowstick Jungle",
+	"Magic Detective Town",
+	"Pixel Candyland",
+	"Time-Travel Adventure Park",
+	"Puzzle Pop Pyramid",
+	"Hugbug Alien Planet",
+	"Cuddly Toybox Kingdom",
+	"Flying Cupcake Carnival",
+	"Bouncing Balloon City",
+	"Starry Sprinkle Observatory",
+	"Ghost Giggle Clocktower",
+	"Dragon Popsicle Peaks",
+	"Silly Elemental Battle Park",
+	"Whispering Cotton Woods",
+	"Cosmic Slideway",
+	"Goblin Gumball Market",
+	"Lunar Ice Cream Caves",
+	"Sunken Treasure Castle",
+	"Firefly Dance Party",
+	"Ghost Pirate Playground",
+	"Marble Cookie Ruins",
+	"Cosmic Soda Swirl",
+	"Volcano Marshmallow Island",
+	"Sandcastle Dream Bazaar",
+	"Magic Mirror Mischief Land",
+	"Prism Sparkle Maze",
+	"Masquerade Candy City",
+	"Fairy Bubble Glade"
 ];
 
 export const script = (handle) => { 
@@ -89,7 +109,7 @@ export const script = (handle) => {
 		      nl: "Hoe ziet je hoofdpersonage eruit?",
 		      fr: "A quoi ressemble votre personnage principal?",
 		    },
-		    visual: "Design an isolated isometric game asset pack for a , [[CONTEXT]] character named [[STEP_VALUE]]. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. no feet and arms, only the torso, facing right. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+		    visual: "Design an isolated isometric game asset pack for a , [[CONTEXT]] character named [[STEP_VALUE]]. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. no feet and arms, only the torso, facing right. \n The artwork should be bright, detailed, and colorful, with an aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
 		    prompt: prepend +"Give me 3 different descriptions of how the main character looks. Include the name of the character and a basic description of clothes" 
 		  }
 	  	break;
@@ -131,7 +151,7 @@ export const script = (handle) => {
 		      nl: "Welke omschrijving past het best bij de slechterik?",
 		      fr: "Quelle description correspond le mieux au méchant ?",
 		    },
-		    visual: "Design an isolated isometric game asset pack for a villain, [[CONTEXT]] character named [[STEP_VALUE]]. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right, no arms or legs, torso and head facing right. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+		    visual: "Design an isolated isometric game asset pack for a villain, [[CONTEXT]] character named [[STEP_VALUE]]. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right, no arms or legs, torso and head facing right. \n The artwork should be bright, detailed, and colorful aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
 		    prompt: prepend + "Give me 3 creative descriptions of the villain character.  Include the name of the character and a basic description of clothes" 
 		  }
 	  	break;
@@ -145,7 +165,7 @@ export const script = (handle) => {
 		      nl: "En wie zijn de assistenten van de slechterik?",
 		      fr: "Et qui sont les assistants de la scélérat ?",
 		    },
-		    visual: "Design an isolated isometric game asset of an angry, floating, [[STEP_VALUE]] \n The warrior should be a sentient creature from [[CONTEXT]]. It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a comic book-style, illustrative, and cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+		    visual: "Design an isolated isometric game asset of an angry, floating, [[STEP_VALUE]] \n The warrior should be a sentient creature from [[CONTEXT]]. It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a  cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
 		    prompt: prepend + "what creative  enemies could we encounter that the antagonist puts in our path" 
 		  }
 	  	break;
@@ -187,7 +207,7 @@ export const script = (handle) => {
 		      nl: "Perfect! Je wereld krijgt andere bewoners die je tips kunnen geven. Wat is de naam van de persoon die we ontmoeten?",
 		      fr: "Parfait ! Ton monde sera peuplé d'autres personnages qui peuvent donner des conseils. Quel est le nom de la personne que l'on rencontre ?",
 		    },
-		    visual: "2Design an isolated isometric game asset pack for a NPC, [[CONTEXT]] character named [[STEP_VALUE]]. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+		    visual: "2Design an isolated isometric game asset pack for a NPC, [[CONTEXT]] character named [[STEP_VALUE]]. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. \n The artwork should be bright, detailed, and colorful, with a aesthetic that adds depth while maintaining a playful and immersive feel. \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
 		    prompt: prepend + "give me three inhabitants of the world that the player encounters in the game, give a name and profession" 
 		  }
 			break;
