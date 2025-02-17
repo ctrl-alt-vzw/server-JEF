@@ -4,6 +4,7 @@ import knexfile  from './db/knexfile.cjs';
 import {generateUUID} from './helpers.js'
 import {script} from './script.js'
 import {queue_prompt} from './comfyHelper.js'
+const path = require('path')
 
 const db = knex(knexfile);
 const wss = new WebSocketServer({ port: 3000 });
@@ -38,7 +39,6 @@ app.get('/', function (req, res) {
   res.send('Hello World')
 })
 
-app.use('/monitor', express.static('static_frontend'))
 
 app.get('/games', function (req, res) {
   db.select("*").table("games").then((data) => {
@@ -62,6 +62,7 @@ app.get('/games/:uuid', function (req, res) {
   })
 })
 
+app.use('/monitor', express.static(path.join(__dirname, 'static_frontend')))
 
 
 app.listen(3001)
