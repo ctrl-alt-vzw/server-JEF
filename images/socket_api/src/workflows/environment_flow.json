@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 971520954216379,
+      "seed": 624967996319061,
       "steps": 3,
       "cfg": 1.5,
       "sampler_name": "euler",
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "A 4x4 grid of isometric game tiles for an Pixel dreamscape. The top two rows (8 tiles) feature only empty floor tiles with subtle variations in texture, color, or minor decorative details for variety, but without any objects. The bottom two rows (8 tiles) contain environment elements and obstacles that block the player’s path. The artwork is bright, colorful, and playful, with a fantasy theme. The background is black",
+      "text": "A 4x4 grid of isometric game tiles for an Lucky Lollipop Casino (Las Vegas) - Wild West. The top two rows (8 tiles) feature only empty floor tiles with subtle variations in texture, color, or minor decorative details for variety, but without any objects. The bottom two rows (8 tiles) contain environment elements and obstacles that block the player’s path. The artwork is bright, colorful, and playful, with a fantasy theme. The background is black",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/190ae6cd-27f1-4abb-ae93-083e22b5d57f_ENVIRONMENT.png",
+      "path": "/home/jan/Documents/server-JEF/_volumes/images/33861f73-2104-4685-bead-d493cd293125_ENVIRONMENT.png",
       "quality": 100,
       "images": [
         "50",
@@ -133,9 +133,9 @@
   },
   "26": {
     "inputs": {
-      "strength": 0.27,
+      "strength": 0.3,
       "start_percent": 0,
-      "end_percent": 0.29,
+      "end_percent": 0.4,
       "positive": [
         "54",
         0
