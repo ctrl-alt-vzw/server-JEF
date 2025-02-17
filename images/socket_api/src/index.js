@@ -1,10 +1,10 @@
 import knex  from 'knex';
+import path from 'path'
 import { WebSocketServer } from 'ws';
 import knexfile  from './db/knexfile.cjs';
 import {generateUUID} from './helpers.js'
 import {script} from './script.js'
 import {queue_prompt} from './comfyHelper.js'
-const path = require('path')
 
 const db = knex(knexfile);
 const wss = new WebSocketServer({ port: 3000 });
