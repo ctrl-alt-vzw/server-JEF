@@ -9,8 +9,8 @@
 				let socket_api;
 
 				function connectWebSocket() {
-						socket = new WebSocket('ws://0.0.0.0:8188/ws');
-						socket_api = new WebSocket('ws://0.0.0.0:3002/ws');
+						socket = new WebSocket('ws://127.0.0.1:8188/ws');
+						socket_api = new WebSocket('ws://127.0.0.1:3002/ws');
 
 						socket.onopen = function() {
 								console.log("WebSocket 1 connected");
