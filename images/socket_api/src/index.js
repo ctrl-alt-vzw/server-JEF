@@ -275,7 +275,7 @@ async function execute_chat(id, step_handle, context) {
 			.then(r => r.json())
 			.then(d => {
 				const response = d.response;
-				console.log(response);
+				console.log("response", response);
 				// translate(response, conversations[id].language, (translated_response) => {
 				// 	try {
 				// 		// console.log(translated_response)
