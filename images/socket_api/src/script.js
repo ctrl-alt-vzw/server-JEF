@@ -165,7 +165,7 @@ export const script = (handle) => {
 		      nl: "En wie zijn de assistenten van de slechterik?",
 		      fr: "Et qui sont les assistants de la scélérat ?",
 		    },
-		    visual: "Design an isolated isometric game asset of an angry, floating, [[STEP_VALUE]] \n The warrior should be a sentient creature from [[CONTEXT]]. It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a  cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+		    visual: "Design an isolated isometric game asset of an angry, floating, henchmen. \n The warrior should be a sentient creature from [[CONTEXT]]. It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground or other scenery below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a  cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
 		    prompt: prepend + "what creative  enemies could we encounter that the antagonist puts in our path" 
 		  }
 	  	break;
