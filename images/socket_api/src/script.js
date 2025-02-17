@@ -54,7 +54,7 @@ const rogueliteSettings = [
 
 export const script = (handle) => { 
 
-	const prepend = `Respond with the exact answer only. Do not include any extra text before or after the main response. Provide only the answer in plain text. If you answer with multiple items, make a list (1., 2., 3.) separated by newlines (enter). Make the answer as short as possible. Here is the context: [[CONTEXT]]. `
+	const prepend = `Respond with the exact answer only. Do not include any extra text before or after the main response. Provide only the answer in plain text. If you answer with multiple items, make a list (1., 2., 3.) separated by newlines (enter). Make the answer as short as possible. Make sure the answer is fitting for a 9 year old. Here is the context: [[CONTEXT]]. `
 	const vprepend = `Respond with the exact answer only. Do not include any extra text before or after the main response. Provide only the answer in plain text. include the following words: "High definition, 4k, high detail". Here is the context: [[CONTEXT]]. `
 	switch(handle) {
 	  case "ENVIRONMENT": 
