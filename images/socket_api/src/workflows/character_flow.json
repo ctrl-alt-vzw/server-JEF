@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 712469371060559,
+      "seed": 660588744895293,
       "steps": 2,
       "cfg": 1.7,
       "sampler_name": "euler",
@@ -80,7 +80,7 @@
   },
   "16": {
     "inputs": {
-      "image": "bot_base (2).png",
+      "image": "bot_base (3).png",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -271,6 +271,18 @@
     "class_type": "FluxGuidance",
     "_meta": {
       "title": "FluxGuidance"
+    }
+  },
+  "57": {
+    "inputs": {
+      "images": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
     }
   }
 }

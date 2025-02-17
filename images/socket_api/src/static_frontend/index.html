@@ -13,13 +13,13 @@
 
 						socket.onopen = function() {
 								console.log("WebSocket 1 connected");
-								document.getElementById("connect-status").innerText = "Websocket 1 status: connected";
+								document.getElementById("connect-status").innerText = "ComfyUI status: connected";
 						};
 						socket.onmessage = handleMessage;
 
 						socket.onerror = function(error) {
 								console.error("WebSocket 1 error:", error);
-								document.getElementById("connect-status").innerText = "Websocket 1 status: disconnected";
+								document.getElementById("connect-status").innerText = "ComfyUI status: disconnected";
 						};
 						socket.onclose = function() {
 								console.log("WebSocket 1 disconnected, retrying in 5 seconds...");
@@ -33,13 +33,13 @@
 
 						socket_api.onopen = function() {
 								console.log("WebSocket 2 connected");
-								document.getElementById("connect-status-2").innerText = "Websocket 2 status: connected";
+								document.getElementById("connect-status-2").innerText = "socket server status: connected";
 						};
 
 						socket_api.onmessage = handleLog;
 						socket_api.onerror = function(error) {
 								console.error("WebSocket 2 error:", error);
-								document.getElementById("connect-status-2").innerText = "Websocket 2 status: disconnected";
+								document.getElementById("connect-status-2").innerText = "socket server status: disconnected";
 						};
 
 						socket_api.onclose = function() {
