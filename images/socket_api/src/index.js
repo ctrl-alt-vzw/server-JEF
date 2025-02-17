@@ -202,7 +202,7 @@ async function execute_prompt(id, step_handle, context) {
     fetch(`http://${process.env.OLLAMA_HOST}:11434/api/generate`, {
       method: "POST",
       body: JSON.stringify({
-        model: "llama3.2",
+        model: "tinyLlama",
         prompt: `${replaced_prompt}`,
         stream: false
       })
