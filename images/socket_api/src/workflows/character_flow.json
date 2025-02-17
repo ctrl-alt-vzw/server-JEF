@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 957893576256609,
+      "seed": 712469371060559,
       "steps": 2,
-      "cfg": 1.6,
+      "cfg": 1.7,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset pack for an Enchanted Library Maze character, Emilia Wystan. She stands at 5'8\" with long, curly brown hair. She wears a crisp white blouse under a tailored black waistcoat adorned with brass buttons.\n\nThe asset pack should be arranged as follows:\n\n    Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. The arms should be positioned to clearly indicate their orientation while keeping the perspective.\n    Bottom left: Two legs, feet pointing downward—left and right, maintaining the style.\n    Right side: The torso and head, facing to the right, with the front of the face clearly visible. No arms or feet should be attached to this part.\n\nThe artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. The artwork must be in an isometric perspective, isolated from any distracting background elements for seamless game engine integration.",
+      "text": "Design an isolated isometric game asset pack for a , Pixel Dreamscape character named Kaid Renn wears a sleek black jumpsuit with metallic accents, his eyes glowing blue under synthetic skin.. \n The asset pack should be arranged as follows: \n\n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. no feet and arms, only the torso, facing right. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative aesthetic that adds depth while maintaining a playful and immersive feel. \n\n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. ",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/567acf05-ed04-4f0e-8a38-a5f7d7e61ab8_PROTAGONIST_LOOK.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/190ae6cd-27f1-4abb-ae93-083e22b5d57f_PROTAGONIST_LOOK.png",
       "quality": 100,
       "images": [
         "50",

@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 113070062140946,
-      "steps": 2,
-      "cfg": 1.2,
+      "seed": 971520954216379,
+      "steps": 3,
+      "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 0.99,
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "A 4x4 grid of isometric game tiles for an Enchanted Library Maze. \n\nThe top two rows (8 tiles) feature only empty floor tiles with subtle variations in print, texture, color, or minor decorative details for variety, but without any objects. \n\nThe bottom two rows (8 tiles) contain environment elements and obstacles that block the player’s path. \n\nThe artwork is bright, colorful, and playful, with a fantasy theme. The background is plain white.",
+      "text": "A 4x4 grid of isometric game tiles for an Pixel dreamscape. The top two rows (8 tiles) feature only empty floor tiles with subtle variations in texture, color, or minor decorative details for variety, but without any objects. The bottom two rows (8 tiles) contain environment elements and obstacles that block the player’s path. The artwork is bright, colorful, and playful, with a fantasy theme. The background is black",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/567acf05-ed04-4f0e-8a38-a5f7d7e61ab8_ENVIRONMENT.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/190ae6cd-27f1-4abb-ae93-083e22b5d57f_ENVIRONMENT.png",
       "quality": 100,
       "images": [
         "50",
@@ -193,13 +193,13 @@
     "inputs": {
       "transparency": true,
       "model": "isnet-general-use",
-      "post_processing": false,
+      "post_processing": true,
       "only_mask": false,
-      "alpha_matting": false,
-      "alpha_matting_foreground_threshold": 200,
+      "alpha_matting": true,
+      "alpha_matting_foreground_threshold": 250,
       "alpha_matting_background_threshold": 9,
       "alpha_matting_erode_size": 9,
-      "background_color": "none",
+      "background_color": "black",
       "images": [
         "48",
         0

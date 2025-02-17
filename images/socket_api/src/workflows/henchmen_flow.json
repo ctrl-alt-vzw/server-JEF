@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 2659,
+      "seed": 145933739855182,
       "steps": 3,
       "cfg": 1.4000000000000001,
       "sampler_name": "euler",
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset of an angry, floating, Cursed Tomes - Deadly, sentient books bound with magical chains. \n The warrior should be a sentient creature from Enchanted Library MazeIt should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a comic book-style, illustrative, and cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+      "text": "Design an isolated isometric game asset of an angry, floating, Glitcher's Golem: A lumbering construct born from unstable data streams, fueled by Kaid's digital signature.. \n The warrior should be a sentient creature from Pixel DreamscapeIt should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a comic book-style, illustrative, and cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/567acf05-ed04-4f0e-8a38-a5f7d7e61ab8_HENCHMEN.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/190ae6cd-27f1-4abb-ae93-083e22b5d57f_HENCHMEN.png",
       "quality": 100,
       "images": [
         "52",
@@ -137,7 +137,7 @@
   },
   "24": {
     "inputs": {
-      "control_net_name": "FLUX.1/flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
+      "control_net_name": "flux-canny-controlnet-v3.safetensors"
     },
     "class_type": "ControlNetLoader",
     "_meta": {
@@ -146,9 +146,9 @@
   },
   "26": {
     "inputs": {
-      "strength": 0.6,
-      "start_percent": 0,
-      "end_percent": 0.7000000000000001,
+      "strength": 0.4,
+      "start_percent": 0.05,
+      "end_percent": 0.5,
       "positive": [
         "6",
         0

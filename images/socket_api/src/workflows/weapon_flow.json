@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 9335,
+      "seed": 1060840428309245,
       "steps": 2,
       "cfg": 1.3,
       "sampler_name": "dpmpp_2m",
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": " \n Design an isolated isometric game asset of a themed weapon set, from Enchanted Library Maze, arranged from top to bottom in a left-to-right perspective. \n A handgun (top) and A melee weapon (bottom), being Librarian's Quill-Sharpener as a projectile  \n All weapons should be floating in an empty, evenly colored background, making them easy to integrate into a game engine. \n The artwork should be bright, detailed, and colorful, with a comic book-style, illustrative, and cel-shaded aesthetic that adds depth . \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.",
+      "text": " \n Design an isolated game asset of a themed weapon set, from Pixel Dreamscape, arranged from top to bottom in a left-to-right perspective. \n A handgun (top) and A melee weapon (bottom), being Quantum Disruptor: A high-powered energy rifle that manipulates code patterns to overload and shut down Glitcher's Golem. \n All weapons should be floating in an empty, evenly colored background, making them easy to integrate into a game engine. \n The artwork should be bright, detailed, and colorful, with a cel-shaded aesthetic that adds depth . \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/567acf05-ed04-4f0e-8a38-a5f7d7e61ab8_WEAPON.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/190ae6cd-27f1-4abb-ae93-083e22b5d57f_WEAPON.png",
       "quality": 100,
       "images": [
         "49",
@@ -124,7 +124,7 @@
   },
   "24": {
     "inputs": {
-      "control_net_name": "FLUX.1/flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
+      "control_net_name": "flux-canny-controlnet-v3.safetensors"
     },
     "class_type": "ControlNetLoader",
     "_meta": {
@@ -133,9 +133,9 @@
   },
   "26": {
     "inputs": {
-      "strength": 1,
+      "strength": 0.5,
       "start_percent": 0,
-      "end_percent": 1,
+      "end_percent": 0.6,
       "positive": [
         "6",
         0
