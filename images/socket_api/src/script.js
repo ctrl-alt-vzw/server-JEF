@@ -165,7 +165,7 @@ export const script = (handle) => {
 		      nl: "En wie zijn de assistenten van de slechterik?",
 		      fr: "Et qui sont les assistants de la scélérat ?",
 		    },
-		    visual: "Design an isolated isometric game asset of an angry, floating, henchmen. \n The warrior should be a sentient creature from [[CONTEXT]]. It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground or other scenery below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a  cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.",
+		    visual: "Design an isolated isometric game asset of an angry, floating, henchmen. \n The warrior should be a sentient creature from [[CONTEXT]]. It should have glowing eyes and an aggressive expression, emphasizing its battle-ready stance. The warrior is called a [[STEP_VALUE]] \n It should be floating  with no ground or other scenery below it. \n The style should be bright, colorful, and playful, suited for a 9-year-old, with a  cel-shaded aesthetic to add depth and character. \n it should be looking to the left \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine.  make the background contrasting,",
 		    prompt: prepend + "what creative  enemies could we encounter that the antagonist puts in our path" 
 		  }
 	  	break;
@@ -179,7 +179,7 @@ export const script = (handle) => {
 		      nl: "Zij gaan het ons lastig maken! Waarmee kan het hoofdpersonage zich verdedigen?",
 		      fr: "Ils vont nous rendre la tâche difficile ! Avec quoi ton personnage principal peut-il se défendre ?",
 		    },
-		    visual: " \n Design an isolated game asset of a themed weapon set, from [[CONTEXT]], arranged from top to bottom in a left-to-right perspective. \n A handgun (top) and A melee weapon (bottom), being [[STEP_VALUE]] \n All weapons should be floating in an empty, evenly colored background, making them easy to integrate into a game engine. \n The artwork should be bright, detailed, and colorful, with a cel-shaded aesthetic that adds depth . \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.",
+		    visual: " \n Design an isolated game asset of a themed weapon set, from [[CONTEXT]], arranged from top to bottom in a left-to-right perspective. \n A handgun (top) and A melee weapon (bottom), being [[STEP_VALUE]] \n All weapons should be floating in an empty, evenly colored background, making them easy to integrate into a game engine. \n The artwork should be bright, detailed, and colorful, with a cel-shaded aesthetic that adds depth . \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.  make the background contrasting,",
 		    prompt: prepend + "Give me 3 creative  examples of weapons the player can use?" 
 		  }
 	  	break;
