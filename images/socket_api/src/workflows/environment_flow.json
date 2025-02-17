@@ -1,12 +1,12 @@
 {
   "3": {
     "inputs": {
-      "seed": 6446,
+      "seed": 113070062140946,
       "steps": 2,
-      "cfg": 1.4000000000000001,
+      "cfg": 1.2,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.98,
+      "denoise": 0.99,
       "model": [
         "4",
         0
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "A grid of 4x4 isometric elements for a  game set in Enchanted Library Maze. \n the first two rows of tiles, top of the image contains only empty tiles, as reference, no objects on these tiles. \n the elements bellow th first half are environment elements, and other  objects which can block the path of the player. \n white background \n make the artwork bright, colorful, and playful in an illustrative",
+      "text": "A 4x4 grid of isometric game tiles for an Enchanted Library Maze. \n\nThe top two rows (8 tiles) feature only empty floor tiles with subtle variations in print, texture, color, or minor decorative details for variety, but without any objects. \n\nThe bottom two rows (8 tiles) contain environment elements and obstacles that block the player’s path. \n\nThe artwork is bright, colorful, and playful, with a fantasy theme. The background is plain white.",
       "clip": [
         "4",
         1
@@ -124,7 +124,7 @@
   },
   "24": {
     "inputs": {
-      "control_net_name": "FLUX.1/flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
+      "control_net_name": "flux-canny-controlnet-v3.safetensors"
     },
     "class_type": "ControlNetLoader",
     "_meta": {
@@ -133,9 +133,9 @@
   },
   "26": {
     "inputs": {
-      "strength": 1,
+      "strength": 0.27,
       "start_percent": 0,
-      "end_percent": 0.8300000000000001,
+      "end_percent": 0.29,
       "positive": [
         "54",
         0
@@ -224,7 +224,7 @@
   },
   "54": {
     "inputs": {
-      "guidance": 5,
+      "guidance": 3.5,
       "conditioning": [
         "6",
         0
@@ -246,6 +246,30 @@
     "class_type": "ImageOutput",
     "_meta": {
       "title": "Image(s) To Websocket (Base64)"
+    }
+  },
+  "59": {
+    "inputs": {
+      "images": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "60": {
+    "inputs": {
+      "images": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
     }
   }
 }

@@ -174,7 +174,7 @@ async function conversation_step(uuid) {
 //send to client
 async function callback(message) {
   ws.send(message)
-  log_ws.send(message)
+  if(log_ws) { log_ws.send(message) }
 }
 
 // prompt stuff
