@@ -34,6 +34,7 @@ const STEPS = [
 import express from 'express'
 const app = express()
 console.log(process.env.FAST)
+app.use('/monitor', express.static('./static_frontend'))
 app.get('/', function (req, res) {
   res.send('Hello World')
 })
@@ -61,7 +62,6 @@ app.get('/games/:uuid', function (req, res) {
   })
 })
 
-app.use('/monitor', express.static('./static_frontend'))
 
 
 app.listen(3001)
