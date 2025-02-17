@@ -9,8 +9,8 @@
 				let socket_api;
 
 				function connectWebSocket() {
-						socket = new WebSocket('ws://127.0.0.1:8188/ws');
-						socket_api = new WebSocket('ws://127.0.0.1:3002/ws');
+						socket = new WebSocket('ws://192.168.0.148:8188/ws');
+						socket_api = new WebSocket('ws://192.168.0.148:3002/ws');
 
 						socket.onopen = function() {
 								console.log("WebSocket 1 connected");
@@ -84,6 +84,8 @@
 					font-family: Arial, sans-serif; 
 					overflow: hidden;
 					padding: 20px; 
+					background-color: #000;
+					color: #fff;
 					height: 100vh;
 					width: 100vw;
 				}
@@ -91,14 +93,12 @@
 					width: 100%;
 					display: flex;
 					justify-content: space-between;
-					background-color: #eee;
 				}
 				.status { margin-bottom: 10px; }
 				.comfy, .container_monitor {
 					flex: 1;
 					padding: 20px;
 					box-sizing: border-box;
-					background: white;
 					min-height: 500px;
 				}
 				#image_queue {
