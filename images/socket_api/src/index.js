@@ -33,8 +33,7 @@ const STEPS = [
 
 import express from 'express'
 const app = express()
-console.log(process.env.FAST)
-app.use('/monitor', express.static('./static_frontend'))
+app.use('/monitor', express.static('./src/static_frontend'))
 app.get('/', function (req, res) {
   res.send('Hello World')
 })
