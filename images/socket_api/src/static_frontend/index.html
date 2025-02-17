@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ComfyUI Monitor</title>
+		<script>
+				let socket;
+				let socket_api;
+
+				function connectWebSocket() {
+						socket = new WebSocket('ws://192.168.0.148:8188/ws');
+						socket_api = new WebSocket('ws://192.168.0.148:3002/ws');
+
+						socket.onopen = function() {
+								console.log("WebSocket 1 connected");
+								document.getElementById("connect-status").innerText = "Websocket 1 status: connected";
+						};
+
+						socket_api.onopen = function() {
+								console.log("WebSocket 2 connected");
+								document.getElementById("connect-status-2").innerText = "Websocket 2 status: connected";
+						};
+
+						socket.onmessage = handleMessage;
+						socket_api.onmessage = handleLog;
+
+						socket.onerror = function(error) {
+								console.error("WebSocket 1 error:", error);
+								document.getElementById("connect-status").innerText = "Websocket 1 status: disconnected";
+						};
+
+						socket_api.onerror = function(error) {
+								console.error("WebSocket 2 error:", error);
+								document.getElementById("connect-status-2").innerText = "Websocket 2 status: disconnected";
+						};
+
+						socket.onclose = function() {
+								console.log("WebSocket 1 disconnected, retrying in 5 seconds...");
+								setTimeout(connectWebSocket, 5000);
+						};
+
+						socket_api.onclose = function() {
+								console.log("WebSocket 2 disconnected, retrying in 5 seconds...");
+								setTimeout(connectWebSocket, 5000);
+						};
+				}
+
+				function handleLog(event) {
+
+					console.log(event)
+					const logELement = `
+						<div class="log_el"><h3>${event.}
+					`
+					document.getElementById("logs").insertAdjacentElement("afterbegin", logELement)
+				}
+				function handleMessage(event) {
+						let data = JSON.parse(event.data);
+						console.log(data);
+						if(data.type == "status") {
+								document.getElementById('queue-status').innerText = `Queue: ${data.data.status.exec_info.queue_remaining}`;
+						} 
+						if(data.type == "knodes") {
+								if (data.data.images && data.data.images.length > 0) {
+										const imageElement = document.createElement("img");
+										imageElement.src = `data:image/png;base64,${data.data.images[0]}`;
+										document.getElementById("image_queue").insertAdjacentElement("afterbegin", imageElement);
+										check_length();
+								}
+						}
+				}
+
+
+				function check_length() {
+						const imageQueue = document.getElementById('image_queue');
+						if (imageQueue.children.length > 2) {
+								imageQueue.removeChild(imageQueue.lastChild);
+						}
+				}
+
+				window.onload = connectWebSocket;
+		</script>
+		<style>
+				body { font-family: Arial, sans-serif; padding: 20px; }
+				.container {
+						width: 100vw;
+						display: flex;
+						justify-content: space-between;
+						background-color: #eee;
+				}
+				.status { margin-bottom: 10px; }
+				.comfy, .container_monitor {
+						flex: 1;
+						padding: 20px;
+						box-sizing: border-box;
+						background: white;
+						min-height: 500px;
+				}
+				#image_queue {
+						display: flex;
+						flex-direction: column;
+				}
+		</style>
+</head>
+<body>
+		<div class="container">
+				<div class="comfy">
+						<h2>ComfyUI Monitor</h2>
+						<div class="status" id="connect-status">Websocket 1: Loading...</div>
+						<div class="status" id="queue-status">Queue: Loading...</div>
+						<h2>Images</h2>
+						<div id="image_queue"></div>
+				</div>
+				<div class="container_monitor">
+						<h2>Container Monitor</h2>
+						<div class="status" id="connect-status-2">Websocket 2: Loading...</div>
+						<div id="logs"></div>
+				</div>
+		</div>
+</body>
+</html>

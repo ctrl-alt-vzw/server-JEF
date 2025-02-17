@@ -40,9 +40,11 @@ services:
     ports:
       - 3000:3000
       - 3001:3001
+      - 3002:3002
     expose:
       - 3000:3000
       - 3001:3001
+      - 3002:3002
     depends_on:
       store:
         condition: service_healthy

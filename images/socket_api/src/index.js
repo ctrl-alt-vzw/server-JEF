@@ -7,7 +7,9 @@ import {queue_prompt} from './comfyHelper.js'
 
 const db = knex(knexfile);
 const wss = new WebSocketServer({ port: 3000 });
+const log_wss = new WebSocketServer({ port: 3002 });
 let ws = null;
+let log_ws = null;
 
 let timer = null;
 const pipeline = []
@@ -170,6 +172,7 @@ async function conversation_step(uuid) {
 //send to client
 async function callback(message) {
   ws.send(message)
+  log_ws.send(message)
 }
 
 // prompt stuff
@@ -298,6 +301,12 @@ wss.on('connection', function connection(_ws) {
   ws.on('message', function message(data) {
     messageHandler(data)
   });
+});
+
+log_wss.on('connection', function connection(_ws) {
+  console.log("connection for log")
+  log_ws = _ws;
+  ws.on('error', console.error);
 });
 async function initialise() {
   console.log("connect")
