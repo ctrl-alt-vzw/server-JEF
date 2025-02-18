@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 158835825221330,
-      "steps": 3,
-      "cfg": 2.4,
+      "seed": 39017819756984,
+      "steps": 2,
+      "cfg": 2.2,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset pack for a character, in Time-Travel Adventure Park. the character is described as follows: Luna Nightshade wears a brown leather jacket with a silver buckle, paired with a white tank top and dark green shorts.. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. no feet and arms, facing right. \n  The artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a contrasting background in bright chroma green",
+      "text": "Design an isolated isometric game asset pack for a character, in Time-Travel Adventure Park. the character is described as follows: Max Wellington has a white and orange jumpsuit, tan boots, and messy curly blonde hair with a silver watch on his wrist.. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. no feet and arms, facing right. \n  The artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a contrasting background in bright chroma green",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/c92f7d9d-4341-4c4a-825e-f3e1a93422e2_PROTAGONIST_LOOK.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/28a89ad4-5d98-4da3-a3d8-791787b25a91_PROTAGONIST_LOOK.png",
       "quality": 100,
       "images": [
         "50",
@@ -110,8 +110,8 @@
       "supersample": "true",
       "resampling": "lanczos",
       "rescale_factor": 2,
-      "resize_width": 512,
-      "resize_height": 512,
+      "resize_width": 768,
+      "resize_height": 768,
       "image": [
         "16",
         0
@@ -192,8 +192,8 @@
   },
   "48": {
     "inputs": {
-      "width": 512,
-      "height": 512,
+      "width": 768,
+      "height": 768,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -204,16 +204,16 @@
   "50": {
     "inputs": {
       "transparency": true,
-      "model": "u2net",
+      "model": "isnet-general-use",
       "post_processing": false,
       "only_mask": false,
       "alpha_matting": false,
       "alpha_matting_foreground_threshold": 240,
       "alpha_matting_background_threshold": 9,
       "alpha_matting_erode_size": 9,
-      "background_color": "none",
+      "background_color": "chroma green",
       "images": [
-        "47",
+        "53",
         0
       ]
     },
@@ -233,6 +233,36 @@
     "class_type": "FluxGuidance",
     "_meta": {
       "title": "FluxGuidance"
+    }
+  },
+  "52": {
+    "inputs": {
+      "images": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "53": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "upscale_method": "nearest-exact",
+      "keep_proportion": false,
+      "divisible_by": 2,
+      "crop": "disabled",
+      "image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ",
+    "_meta": {
+      "title": "Resize Image"
     }
   }
 }
