@@ -101,6 +101,7 @@ services:
       LT_LOAD_ONLY: 'nl,fr,en'
       LT_THREADS: 2
       LT_SUGGESTIONS: false 
+      DEBUG: true
     tty: true 
     deploy:
       resources:
@@ -112,6 +113,8 @@ services:
     healthcheck:
       start_period: "60s"
       test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
+    volumes:                                                                                                                                        
+      - ./_volumes/images/libretranslate:/home/libretranslate/.local/share/argos-translate
 
 networks:
   local:
