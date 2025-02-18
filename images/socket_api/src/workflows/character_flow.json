@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 821215450893100,
+      "seed": 8999,
       "steps": 3,
       "cfg": 1.7,
       "sampler_name": "euler",
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset pack for an evil villain, in Cosmic Slideway. the character is described as follows: Zara Blackhole wears a dark, hooded cloak with billowy sleeves, adorned with stars that dim as she moves.. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right, no arms or legs, torso and head facing right. \n The artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a black background",
+      "text": "Design an isolated isometric game asset pack for a character, in Giggly Gummy Kingdom. the character is described as follows: She has curly blonde hair in pigtails, each adorned with a small gummy bear clip, and bright green eyes that shine like sugar crystals.. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. no feet and arms, facing right. \n  The artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a contrasting background",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/18e6b5f5-bcc8-4843-bb66-74f2881e9b78_ANTAGONIST_LOOK.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/46315fda-f534-41ad-8419-c31000631f2f_PROTAGONIST_LOOK.png",
       "quality": 100,
       "images": [
         "47",
