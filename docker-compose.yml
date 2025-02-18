@@ -115,10 +115,9 @@ services:
       start_period: "60s"
       test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
     volumes:
-      - ./_volumes/libretranslate/data:/home/libretranslate/.local/share
-      - ./_volumes/libretranslate/cache:/home/libretranslate/.local/cache
-      - ./_volumes/libretranslate/libretranslate_models:/home/libretranslate/.local:rw
-      - ./_volumes/libretranslate/all:/home/libretranslate:rw
+      - ./_volumes/libretranslate/data:/root/.local/share
+      - ./_volumes/libretranslate/cache:/root/.local/cache
+      - ./_volumes/libretranslate/libretranslate_models:/root/.local:rw
       
   
 
