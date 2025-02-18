@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 43242568672593,
+      "seed": 821215450893100,
       "steps": 3,
       "cfg": 1.7,
       "sampler_name": "euler",
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset pack for a , Dreamy Cotton Candy World character named Finnley Fizz wears a pastel pink tutu with a matching hat, paired with a white shirt and colorful striped pants.. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. no feet and arms. \n \nThe artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel.\n\nEnsure the face is fully visible from the right perspective, avoiding any back-facing views. \n\n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a contrasting background",
+      "text": "Design an isolated isometric game asset pack for an evil villain, in Cosmic Slideway. the character is described as follows: Zara Blackhole wears a dark, hooded cloak with billowy sleeves, adorned with stars that dim as she moves.. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right, no arms or legs, torso and head facing right. \n The artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a black background",
       "clip": [
         "4",
         1
@@ -66,10 +66,10 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/jan/Documents/server-JEF/_volumes/images/62da776f-f662-4fc8-a815-cbe572d92045_PROTAGONIST_LOOK.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/18e6b5f5-bcc8-4843-bb66-74f2881e9b78_ANTAGONIST_LOOK.png",
       "quality": 100,
       "images": [
-        "50",
+        "47",
         0
       ]
     },
@@ -189,27 +189,6 @@
       "title": "EmptySD3LatentImage"
     }
   },
-  "50": {
-    "inputs": {
-      "transparency": true,
-      "model": "isnet-general-use",
-      "post_processing": false,
-      "only_mask": false,
-      "alpha_matting": false,
-      "alpha_matting_foreground_threshold": 200,
-      "alpha_matting_background_threshold": 10,
-      "alpha_matting_erode_size": 11,
-      "background_color": "none",
-      "images": [
-        "47",
-        0
-      ]
-    },
-    "class_type": "Image Rembg (Remove Background)",
-    "_meta": {
-      "title": "Image Rembg (Remove Background)"
-    }
-  },
   "52": {
     "inputs": {
       "images": [
@@ -226,7 +205,7 @@
     "inputs": {
       "Actions": "",
       "images": [
-        "50",
+        "47",
         0
       ]
     },
@@ -238,7 +217,7 @@
   "54": {
     "inputs": {
       "images": [
-        "50",
+        "47",
         0
       ]
     },
@@ -251,7 +230,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "50",
+        "47",
         0
       ]
     },
