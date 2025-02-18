@@ -99,7 +99,7 @@ services:
       LT_FRONTEND_LANGUAGE_SOURCE: fr
       LT_FRONTEND_LANGUAGE_TARGET: en
       LT_LOAD_ONLY: 'nl,fr,en'
-      LT_UPDATE_MODELS: true
+      LT_WITH_MODELS: true 
       LT_THREADS: 2
       LT_SUGGESTIONS: false 
       DEBUG: true
