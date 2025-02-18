@@ -140,7 +140,7 @@ async function handle_selection(uuid, step_id, selected) {
         
     conversations[uuid].step += 1;
     callback("SET_STEP/"+conversations[uuid].step)
-
+    console.log(visual_prompt, conversations[uuid].step)
     if(visual_prompt !== null) {
       const context = build_context(uuid)
       execute_prompt_visual(visual_prompt, context, uuid, STEPS[step_id], conversations[uuid].style_ref)
