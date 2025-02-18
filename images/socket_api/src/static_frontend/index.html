@@ -9,7 +9,7 @@
 				let socket_api;
 
 				function connectWebSocket() {
-						socket = new WebSocket('ws://192.168.0.148:8188/ws');
+						socket = new WebSocket('ws://192.168.0.1:8188/ws');
 
 						socket.onopen = function() {
 								console.log("WebSocket 1 connected");
@@ -29,7 +29,7 @@
 
 
 				function connectWebSocketLog() {
-						socket_api = new WebSocket('ws://192.168.0.148:3002/ws');
+						socket_api = new WebSocket('ws://192.168.0.1:3002/ws');
 
 						socket_api.onopen = function() {
 								console.log("WebSocket 2 connected");
