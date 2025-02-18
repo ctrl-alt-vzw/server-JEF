@@ -114,6 +114,8 @@ services:
     healthcheck:
       start_period: "60s"
       test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
+    volumes:                                                                              
+      - ./_volumes/libretranslate/libretranslate_models:/home/libretranslate/.local:rw
   
 
 networks:
