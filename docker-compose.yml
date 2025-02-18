@@ -92,6 +92,7 @@ services:
     container_name: libretranslate
     hostname: libretranslate
     restart: "always"
+    user: root
     ports:
       - 7500:5000
     environment:
