@@ -99,6 +99,7 @@ services:
       LT_FRONTEND_LANGUAGE_SOURCE: fr
       LT_FRONTEND_LANGUAGE_TARGET: en
       LT_LOAD_ONLY: 'nl,fr,en'
+      LT_UPDATE_MODELS: true
       LT_THREADS: 2
       LT_SUGGESTIONS: false 
       DEBUG: true
@@ -113,8 +114,12 @@ services:
     healthcheck:
       start_period: "60s"
       test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
-    volumes:                                                                                                                                        
-      - ./_volumes/images/libretranslate:/home/libretranslate/.local/share/argos-translate
+    volumes:                                                                              
+      - ./_volumes/libretranslate/data:/home/libretranslate/.local/share
+      - ./_volumes/libretranslate/cache:/home/libretranslate/.local/cache
+      - ./_volumes/libretranslate/libretranslate_api_keys:/app/db
+      - ./_volumes/libretranslate/libretranslate_models:/home/libretranslate/.local:rw
+  
 
 networks:
   local:
