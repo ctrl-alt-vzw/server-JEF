@@ -111,8 +111,8 @@ services:
               count: 1
               capabilities: [gpu]
     healthcheck:
-      timeout: 10
-      start_period: 30
+      timeout: "10s"
+      start_period: "30s"
       test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
 
 networks:
