@@ -100,7 +100,18 @@ services:
       LT_FRONTEND_LANGUAGE_TARGET: en
       LT_LOAD_ONLY: 'nl,fr,en'
       LT_THREADS: 2
-      LT_SUGGESTIONS: false  
+      LT_SUGGESTIONS: false 
+    tty: true 
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      start_period: "60s"
+      test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
 
 networks:
   local:
