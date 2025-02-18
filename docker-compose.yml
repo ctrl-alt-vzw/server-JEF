@@ -101,7 +101,6 @@ services:
       LT_DISABLE_WEB_UI: true
       LT_WITH_MODELS: true 
       LT_THREADS: 2
-      LT_SHARED_STORAGE: "/home/libretranslate/.local/share/argos-translate/packages/"
       LT_SUGGESTIONS: false 
     tty: true 
     deploy:
