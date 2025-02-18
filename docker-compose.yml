@@ -117,7 +117,6 @@ services:
     volumes:                                                                              
       - ./_volumes/libretranslate/data:/home/libretranslate/.local/share
       - ./_volumes/libretranslate/cache:/home/libretranslate/.local/cache
-      - ./_volumes/libretranslate/libretranslate_api_keys:/app/db
       - ./_volumes/libretranslate/libretranslate_models:/home/libretranslate/.local:rw
   
 
