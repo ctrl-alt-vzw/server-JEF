@@ -95,14 +95,12 @@ services:
     ports:
       - 7500:5000
     environment:
-      LT_DEBUG: false
-      LT_FRONTEND_LANGUAGE_SOURCE: fr
-      LT_FRONTEND_LANGUAGE_TARGET: en
+      LT_DEBUG: true
       LT_LOAD_ONLY: 'nl,fr,en'
+      LT_DISABLE_WEB_UI: true
       LT_WITH_MODELS: true 
       LT_THREADS: 2
       LT_SUGGESTIONS: false 
-      DEBUG: true
     tty: true 
     deploy:
       resources:
@@ -114,6 +112,12 @@ services:
     healthcheck:
       start_period: "60s"
       test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
+    volumes:
+      - ./_volumes/libretranslate/data:/home/libretranslate/.local/share
+      - ./_volumes/libretranslate/cache:/home/libretranslate/.local/cache
+      - ./_volumes/libretranslate/libretranslate_api_keys:/app/db
+      - ./_volumes/libretranslate/libretranslate_models:/home/libretranslate/.local:rw
+  
   
 
 networks:
