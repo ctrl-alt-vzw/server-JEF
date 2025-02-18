@@ -12,7 +12,7 @@
 						socket = new WebSocket('ws://192.168.0.1:8188/ws');
 
 						socket.onopen = function() {
-								console.log("WebSocket 1 connected");
+								console.log("WebSocket comfy connected");
 								document.getElementById("connect-status").innerText = "ComfyUI status: connected";
 						};
 						socket.onmessage = handleMessage;
@@ -32,7 +32,7 @@
 						socket_api = new WebSocket('ws://192.168.0.1:3002/ws');
 
 						socket_api.onopen = function() {
-								console.log("WebSocket 2 connected");
+								console.log("WebSocket server connected");
 								document.getElementById("connect-status-2").innerText = "socket server status: connected";
 						};
 
