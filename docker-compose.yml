@@ -49,8 +49,6 @@ services:
     depends_on:
       store:
         condition: service_healthy
-      libretranslate:
-        condition: service_healthy
     volumes:
       - ./images/socket_api/src:/usr/app/src
     network_mode: host
@@ -103,17 +101,6 @@ services:
       LT_LOAD_ONLY: 'nl,fr,en'
       LT_THREADS: 2
       LT_SUGGESTIONS: false  
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
-    healthcheck:
-      timeout: "10s"
-      start_period: "30s"
-      test: ['CMD-SHELL', './venv/bin/python scripts/healthcheck.py']
 
 networks:
   local:
