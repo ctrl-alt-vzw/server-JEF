@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 116591966323246,
-      "steps": 4,
-      "cfg": 1.7,
+      "seed": 158835825221330,
+      "steps": 3,
+      "cfg": 2.4,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset pack for an evil villain, in Giggly Gummy Kingdom. the character is described as follows: Sticky Stinger wears a torn, seaweed-green onesie with yellow polka dots and has six long, squishy tentacles that can stretch up to 10 feet.. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right, no arms or legs, torso and head facing right. \n The artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a contrasting background in bright chroma green",
+      "text": "Design an isolated isometric game asset pack for a character, in Time-Travel Adventure Park. the character is described as follows: Luna Nightshade wears a brown leather jacket with a silver buckle, paired with a white tank top and dark green shorts.. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. no feet and arms, facing right. \n  The artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a contrasting background in bright chroma green",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/4999cf83-2095-43f5-9c69-1e39da095699_ANTAGONIST_LOOK.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/c92f7d9d-4341-4c4a-825e-f3e1a93422e2_PROTAGONIST_LOOK.png",
       "quality": 100,
       "images": [
         "50",
@@ -133,11 +133,11 @@
   },
   "26": {
     "inputs": {
-      "strength": 0.75,
+      "strength": 1,
       "start_percent": 0,
-      "end_percent": 0.5,
+      "end_percent": 1,
       "positive": [
-        "6",
+        "51",
         0
       ],
       "negative": [
@@ -204,7 +204,7 @@
   "50": {
     "inputs": {
       "transparency": true,
-      "model": "isnet-general-use",
+      "model": "u2net",
       "post_processing": false,
       "only_mask": false,
       "alpha_matting": false,
@@ -220,6 +220,19 @@
     "class_type": "Image Rembg (Remove Background)",
     "_meta": {
       "title": "Image Rembg (Remove Background)"
+    }
+  },
+  "51": {
+    "inputs": {
+      "guidance": 3.7,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
     }
   }
 }
