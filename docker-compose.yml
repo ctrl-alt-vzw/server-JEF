@@ -117,7 +117,8 @@ services:
       - ./_volumes/libretranslate/data:/home/libretranslate/.local/share
       - ./_volumes/libretranslate/cache:/home/libretranslate/.local/cache
       - ./_volumes/libretranslate/libretranslate_models:/home/libretranslate/.local:rw
-  
+      - ./_volumes/libretranslate/all:/home/libretranslate:rw
+      
   
 
 networks:
