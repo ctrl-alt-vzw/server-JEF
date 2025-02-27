@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 39017819756984,
+      "seed": 792751115090723,
       "steps": 2,
       "cfg": 2.2,
       "sampler_name": "euler",
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": "Design an isolated isometric game asset pack for a character, in Time-Travel Adventure Park. the character is described as follows: Max Wellington has a white and orange jumpsuit, tan boots, and messy curly blonde hair with a silver watch on his wrist.. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. no feet and arms, facing right. \n  The artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a contrasting background in bright chroma green",
+      "text": "Design an isolated isometric game asset pack for a character, in Time-Travel Adventure Park. the character is described as follows: Aria Flynn - Timekeeper. \n The asset pack should be arranged as follows: \n Top left: Two arms, fingers pointing downward—one outer left hand and one inner right hand. \n Bottom left: Two legs, feet pointing downward—left and right. \n Right side: The torso and head, facing forward to the right. \n The artwork should be bright, detailed, and colorful while maintaining a playful and immersive feel. Ensure the face is fully visible from the right perspective, avoiding any back-facing views. Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements, making it easy to integrate into a game engine. Add a contrasting background in bright chroma green",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/28a89ad4-5d98-4da3-a3d8-791787b25a91_PROTAGONIST_LOOK.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/d21ff008-2af4-487a-a0d5-7c9e85681fe6_NPC.png",
       "quality": 100,
       "images": [
         "50",
@@ -110,8 +110,8 @@
       "supersample": "true",
       "resampling": "lanczos",
       "rescale_factor": 2,
-      "resize_width": 768,
-      "resize_height": 768,
+      "resize_width": 512,
+      "resize_height": 512,
       "image": [
         "16",
         0
@@ -192,8 +192,8 @@
   },
   "48": {
     "inputs": {
-      "width": 768,
-      "height": 768,
+      "width": 512,
+      "height": 512,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
