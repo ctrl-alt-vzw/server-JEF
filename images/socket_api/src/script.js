@@ -68,7 +68,7 @@ export const script = (handle) => {
 		      fr: "C'est parti ! Où se déroule ton jeu ?",
 		    },
 		    visual: "A 4x4 grid of isometric game tiles for an [[STEP_VALUE]]. The top two rows (8 tiles) feature only empty floor tiles with subtle variations in texture, color, or minor decorative details for variety, but without any objects. The bottom two rows (8 tiles) contain environment elements and obstacles that block the player’s path. The artwork is bright, colorful, and playful, with a fantasy theme. The background is black",
-		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 creative and weird timeperiods and locations for a computer game for children, pick from this list: ${rogueliteSettings.map((e) => e + ", ")}` 
+		    prompt: prepend + `reset, start over, forget everything from the previous generations. Give me a list of 3 creative and weird timeperiods and locations for a computer game for children, pick from this list: ${rogueliteSettings.filter(e => Math.random() > .4).map((e) => e + ", ")}` 
 		  }
 	  	break;
 	  case "PROTAGONIST": 
