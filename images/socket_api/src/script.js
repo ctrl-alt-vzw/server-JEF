@@ -179,7 +179,7 @@ export const script = (handle) => {
 		      nl: "Zij gaan het ons lastig maken! Waarmee kan het hoofdpersonage zich verdedigen?",
 		      fr: "Ils vont nous rendre la tâche difficile ! Avec quoi ton personnage principal peut-il se défendre ?",
 		    },
-		    visual: " \n Design an isolated game asset of a themed weapon set, from [[CONTEXT]], arranged from top to bottom in a left-to-right perspective. \n A handgun (top) and A melee weapon (bottom), being [[STEP_VALUE]] \n All weapons should be floating in an empty, evenly colored background, making them easy to integrate into a game engine. \n The artwork should be bright, detailed, and colorful, with a cel-shaded aesthetic that adds depth . \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.  make the background contrasting,",
+		    visual: " Design an isolated game asset of a themed weapon set, from [[CONTEXT]], arranged from top to bottom in a left-to-right perspective. The bottom part contains a projectile. \n\n two [[STEP_VALUE]], floating in an empty, evenly colored background, making them easy to integrate into a game engine.  \n\nThe artwork should be bright, detailed, and colorful, with a cel-shaded aesthetic that adds depth . \n\n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.  make the background contrasting,",
 		    prompt: prepend + "Give me 3 creative  examples of weapons the player can use?" 
 		  }
 	  	break;

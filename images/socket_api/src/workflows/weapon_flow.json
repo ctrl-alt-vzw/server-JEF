@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 1060840428309245,
-      "steps": 2,
-      "cfg": 1.3,
+      "seed": 282680660830583,
+      "steps": 3,
+      "cfg": 2.2,
       "sampler_name": "dpmpp_2m",
       "scheduler": "simple",
       "denoise": 1,
@@ -40,7 +40,7 @@
   },
   "6": {
     "inputs": {
-      "text": " \n Design an isolated game asset of a themed weapon set, from Pixel Dreamscape, arranged from top to bottom in a left-to-right perspective. \n A handgun (top) and A melee weapon (bottom), being Quantum Disruptor: A high-powered energy rifle that manipulates code patterns to overload and shut down Glitcher's Golem. \n All weapons should be floating in an empty, evenly colored background, making them easy to integrate into a game engine. \n The artwork should be bright, detailed, and colorful, with a cel-shaded aesthetic that adds depth . \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.",
+      "text": " \n Design an isolated game asset of a themed weapon set, from Lucky Lollipop Casino, arranged from top to bottom in a left-to-right perspective. The bottom part contains a projectile. \n two Lollipop Bats, floating in an empty, evenly colored background, making them easy to integrate into a game engine. \n The artwork should be bright, detailed, and colorful, with a cel-shaded aesthetic that adds depth . \n Ensure the artwork is presented in an isometric perspective, isolated from any distracting background elements.  make the background contrasting,",
       "clip": [
         "4",
         1
@@ -66,7 +66,7 @@
   },
   "12": {
     "inputs": {
-      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/190ae6cd-27f1-4abb-ae93-083e22b5d57f_WEAPON.png",
+      "path": "/home/ai-game-server/Documents/server-JEF/_volumes/images/45626ca5-d282-437e-8752-c6394043b5d9_WEAPON.png",
       "quality": 100,
       "images": [
         "49",
@@ -80,7 +80,7 @@
   },
   "16": {
     "inputs": {
-      "image": "weapon (4).png",
+      "image": "weapon (5).png",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -110,8 +110,8 @@
       "supersample": "true",
       "resampling": "lanczos",
       "rescale_factor": 2,
-      "resize_width": 512,
-      "resize_height": 512,
+      "resize_width": 768,
+      "resize_height": 768,
       "image": [
         "16",
         0
@@ -135,9 +135,9 @@
     "inputs": {
       "strength": 0.5,
       "start_percent": 0,
-      "end_percent": 0.6,
+      "end_percent": 0.35000000000000003,
       "positive": [
-        "6",
+        "54",
         0
       ],
       "negative": [
@@ -180,8 +180,8 @@
   },
   "48": {
     "inputs": {
-      "width": 512,
-      "height": 512,
+      "width": 768,
+      "height": 768,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -201,25 +201,13 @@
       "alpha_matting_erode_size": 10,
       "background_color": "none",
       "images": [
-        "47",
+        "53",
         0
       ]
     },
     "class_type": "Image Rembg (Remove Background)",
     "_meta": {
       "title": "Image Rembg (Remove Background)"
-    }
-  },
-  "50": {
-    "inputs": {
-      "images": [
-        "47",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
     }
   },
   "51": {
@@ -233,6 +221,49 @@
     "class_type": "ImageOutput",
     "_meta": {
       "title": "Image(s) To Websocket (Base64)"
+    }
+  },
+  "52": {
+    "inputs": {
+      "images": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "53": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "upscale_method": "nearest-exact",
+      "keep_proportion": false,
+      "divisible_by": 2,
+      "crop": "disabled",
+      "image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ",
+    "_meta": {
+      "title": "Resize Image"
+    }
+  },
+  "54": {
+    "inputs": {
+      "guidance": 3.7,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
     }
   }
 }
